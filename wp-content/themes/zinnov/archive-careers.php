@@ -177,45 +177,30 @@ get_header('careers'); ?>
                     </div>
                   </li>
                 <?php
-              			$the_query =new WP_Query(array('post_type'=>'careers'));
-              			while($the_query->have_posts() ) : $the_query->the_post();
-            		{
-                    $product_date = get_the_date( 'd M Y', get_the_ID() );
-                    $trimtitle = get_the_content();
-                    $shorttitle = wp_trim_words( $trimtitle, $num_words = 35, $more = '… ' );
+                    $careers = get_posts(array('post_type' => 'careers'));
+                    $cats = get_categories(	array('post_type' => 'careers'));
+                    echo $careers;
+                    //echo $cats[0];
+              		?>
 
-                  $excerpt = $shorttitle;
-                  $words = explode(' ', $excerpt);
-                  array_shift($words); // 1st word
-                  array_shift($words); // 2nd word
-                  $excerpt = implode(' ', $words);
-                  echo get_categories(	$the_query);
-              ?>
+                <li class="cop-menu__list col-lg-12">
+                  <div class="col-sm-5">
+                    <h3 class="text-capitalize"><?php echo $cat;?></h3>
+                  </div>
+                  <ul  class="opning-role-list">
 
-              <?php for ($i=0; $i < ; $i++) {
-                // code...
-              } ?>
-                   <li class="cop-menu__list col-lg-12">
-                     <div class="col-sm-5">
-                       <h3 class="text-capitalize"><?php echo get_field('sub_title');?></h3>
-                     </div>
-                      <ul  class="opning-role-list">
+                    <li class="opning-role">
+                      <div class="col-sm-5">
+                        <a href="<?php echo get_permalink();?>"><h4 class="title title--sm text-capitalize"><?php get_the_title($careers->ID);;?></h4></a>
+                      </div>
+                      <div class="col-sm-2">
+                        <p class="info"><?php echo "2" ?> Opnings</p>
+                      </div>
+                    </li>
 
-                       <li class="opning-role">
-                         <div class="col-sm-5">
-                           <a href="<?php echo get_permalink();?>"><h4 class="title title--sm text-capitalize"><?php the_title();?></h4></a>
-                         </div>
-                         <div class="col-sm-2">
-                           <p class="info"><?php echo "2" ?> Opnings</p>
-                         </div>
-                       </li>
-
-
-
-                     </ul>
-                   </li>
-                  <?php } endwhile;?>
-
+                  </ul>
+                </li>
+              
                 </ul>
               </div>
             </div>
