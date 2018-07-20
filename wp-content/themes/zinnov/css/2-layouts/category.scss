@@ -1,0 +1,214 @@
+.category-menu-wrapper {
+    box-shadow: 0 3px 18px 3px rgba(35, 31, 32, 0.05);
+    background-color: #ffffff;
+    padding: 20px 15px;
+    margin-top: 15px;
+
+    @media(min-width: $sm) {
+        margin-top: 0px;
+        padding: 30px;
+    }
+    .heading {
+        font-weight: 700;
+    }
+
+    .heading-md {
+        @media(min-width: $md) {
+            font-size: 18px;
+            line-height: 28px;
+        }
+    }
+}
+
+
+
+
+.category-menu {
+
+
+    &__list {
+        // display: inline-block;
+        // margin-right: 15px;
+
+        padding: 5px 0px;
+        position: relative;
+
+        @media(min-width: $sm) {
+            padding: 8px 0px;
+        }
+        @media(min-width: $md) {
+            padding: 13px 0px;
+        }
+        &::before,
+        &::after {
+            height: 1px;
+            content: '';
+            width: 100%;
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            background-color: #f5f5f5;
+        }
+
+        &::after {
+            background-color: #d9d9d9;
+            width: 15%;
+        }
+
+        &:last-child {
+            padding-bottom: 0px;
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+
+
+
+    }
+    &__link {
+        color: #999999;
+        font-family: $m-light;
+        font-size: 14px;
+        font-weight: 300;
+        display: inline-block;
+        // padding: 5px 5px;
+        text-transform: capitalize;
+        line-height: 24px;
+        transition: all 400ms ease-in-out;
+
+        // @media(min-width: $sm) {
+        //     font-size: 14px;
+        //     line-height: 24px;
+        // }
+        @media(min-width: $lg) {
+            font-size: 16px;
+            line-height: 26px;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: #1984f1;
+        }
+    }
+}
+
+
+.more-read-menu-wrapper {
+    box-shadow: 0 3px 18px 3px rgba(35, 31, 32, 0.05);
+    background-color: #ffffff;
+    padding: 20px 15px;
+    margin-top: 15px;
+    position: relative;
+
+    @media(min-width: $sm) {
+        // margin-top: 0px;
+        padding: 30px;
+    }
+
+    .bar {
+        position: absolute;
+        top: 10%;
+        right: -5px;
+    }
+
+
+}
+
+.more-read-menu {
+
+    &__list {
+        padding: 5px 0px;
+        position: relative;
+
+        @media(min-width: $sm) {
+            padding: 12px 0px;
+        }
+        @media(min-width: $md) {
+            padding: 20px 0px;
+        }
+        &::before,
+        &::after {
+            height: 1px;
+            content: '';
+            width: 100%;
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            background-color: #f5f5f5;
+        }
+
+        &::after {
+            background-color: #d9d9d9;
+            width: 15%;
+        }
+
+        &:last-child {
+            padding-bottom: 0px;
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    &__link {
+        color: #333333;
+        font-family: $m-regular;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        transition: all 400ms ease-in-out;
+
+        @media(min-width: $sm) {
+            font-size: 16px;
+            line-height: 26px;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: #1984f1;
+        }
+    }
+}
+
+
+.subscription-wrapper {
+    box-shadow: 0 3px 18px 3px rgba(35, 31, 32, 0.05);
+    background-color: #ffffff;
+    padding: 20px 15px;
+    margin-top: 15px;
+    @media(min-width: $sm) {
+        // margin-top: 0px;
+        padding: 30px;
+    }
+
+    .info {
+        padding: 10px 0px;
+        @media(min-width: $sm) {
+            padding: 15px 0px;
+        }
+    }
+
+    .btn {
+        margin-top: 15px;
+
+        @media(min-width: $sm) {
+            margin-top: 25px;
+        }
+    }
+}
+
+
+.blog-right-content {
+    @media(min-width: $sm) {
+        margin-left: 7.5px;
+    }
+}
+.blog-left-content {
+    @media(min-width: $sm) {
+        margin-right: 7.5px;
+    }
+}

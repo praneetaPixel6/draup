@@ -1,0 +1,26 @@
+.hide{
+  display: none;
+}
+
+.img-404 {
+  margin: 0 auto;
+  max-width: 650px;
+  overflow: hidden;
+}
+
+.btn-group {
+  margin-bottom: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.btn-404 {
+  margin-right:40px !important;
+  margin-left:40px !important;
+  border-radius:30px !important;
+}
+
+.btn-404>a{
+  text-decoration: none;
+  color: white;
+}

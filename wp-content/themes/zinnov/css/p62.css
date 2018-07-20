@@ -1,0 +1,308 @@
+/* Home Page */
+.section--homeBanner::before{
+  background: none;
+}
+.section--why-draup .circle--circleBlue{
+  right: -40px;
+  top: 35%;
+}
+.section--why-draup .bar{
+  top: 50%;
+}
+
+.blue-pallet{
+  width: 38px;
+  height: 65px;
+  display: inline-block;
+  background: url('../images/img-blue-pallet.png') 0 0 no-repeat;
+  z-index: 4;
+}
+.section--why-draup .blue-pallet{
+  position: absolute;
+  top: 35%;
+  right: 0;
+}
+.subscribe-wrapper .circle--circlePink--bottom{
+  left: auto;
+  top: auto;
+  right: 5%;
+  bottom: 25%;
+}
+.subscribe-wrapper .circle--ring-2{
+  display: block;
+    top: auto;
+    left:auto;
+    right: 8%;
+    bottom: 10%;
+}
+/* About Page */
+.about-banner{
+  background: url('../images/about-banner.png') 0 0 no-repeat;
+  background-size: cover;
+}
+.section-adv::before{
+  background: none
+}
+.section-teamMembers{
+  position: relative;
+}
+.section-teamMembers .sector-img{
+  right: auto;
+  left: 0;
+  top: 0;
+}
+.section-teamMembers .tumbnail__link{
+  background-color: #fff;
+  width: 255px;
+}
+.team-mem__list{
+  overflow: visible;
+}
+.member-img-wrappe{
+  margin: 20px 20px 20px 0;
+  position: relative;
+  left: -42px;
+}
+.section-adv {
+  padding: 190px 0 0 0;
+}
+.testimonials-content{
+  margin-top: 52px;
+  padding: 100px 0;
+  background-color: #fff;
+  border-radius: 15px 0;
+  box-shadow: 0 3px 21px 6px rgba(35, 31, 32, .08);
+}
+.section-testimonial{
+  background-color: #f1f4f6;
+}
+.section-testimonial::before{
+  background: none;
+  height: auto;
+}
+.section-testimonial p{
+  font: 300 22px/35px "Roboto Slab","Montserrat",sans-serif,arial;
+  color: #666666;
+}
+.testimonial-img-wrap{
+  margin-left: -70px;
+}
+.section-testimonial .user-info{
+  margin-top: 30px;
+}
+.section-testimonial .user-img-wrap{
+  height: 63px;
+  width: 63px;
+  border-radius: 50%;
+  overflow: hidden;
+  vertical-align: middle;
+}
+.section-testimonial .user-info-text{
+  vertical-align: middle;
+  margin-left: 10px;
+  color: #666;
+}
+.section-testimonial .user-info-text h5{
+  font: normal 16px/32px "Montserrat",sans-serif;
+}
+.section-testimonial .user-info-text p{
+  font: 300 12px/32px "Montserrat",sans-serif;
+}
+.roadmap-list .slick-center .roadmap-list__item{
+  background-color: #0196ffd4;
+  position:relative;
+}
+.roadmap-list .slick-center .roadmap-list__item .roadmap-sector{
+  position: absolute;
+  width: 114px;
+  height: 100px;
+  top: 0;
+  right: 0;
+  background: url('../images/roadmap-pallet.png') 35px -30px no-repeat;
+  background-size: 67%;
+}
+/* Event Page */
+.section-events{
+  background-position: 0 -300px;
+}
+.events-menu__list{
+  padding-top: 18px;
+  margin-top: 0;
+}
+.events-menu__list:first-child{
+  padding-top: 30px;
+}
+.btn-mar .btn{
+  width: 80%;
+}
+/* Faq page */
+.section-FAQBanner .breadcrumb-menu{
+  padding-top: 150px;
+}
+.section-FAQBanner .breadcrumb-menu>li>a{
+  color: #999;
+}
+.section-FAQBanner .breadcrumb-menu--gray>li.active{
+  color: #fff;
+  font-weight: 700;
+}
+.section-FAQBanner .sector-img {
+  top: 50%;
+}
+.faq-qa-list__item p{
+  color: #797979;
+  font: 300 15px/24px Montserrat-Light, sans-serif;
+}
+.faq-qa-menu__list .circle-wrapper{
+  top: 130px;
+}
+.model-request .modal-header,.model-request .modal-footer{
+  border: none;
+}
+.model-request .modal-content{
+  max-width: 435px;
+  padding: 30px 50px;
+  position: relative;
+  margin: 0 auto;
+}
+.model-request .modal-header h4{
+  font-size: 18px;
+  font-weight: 700;
+}
+.model-request .modal-header .model-info{
+  margin-top: 20px;
+}
+.model-request .modal-body{
+  margin-top: 20px;
+}
+.model-request .modal-body input{
+  box-shadow: 0 3px 16px 5px rgba(35, 31, 32, .03);
+}
+.model-request .modal-footer{
+  text-align: left;
+  padding-top: 0px;
+}
+.model-request .bar{
+  position: absolute;
+  top: 20px;
+  right: -10px;
+}
+.model-request .modal-dialog{
+  transform: translate(0 , 30%)!important;
+}
+/* Blog Singel page */
+.rate-this{
+  margin-top: 50px;
+  padding-left: 23px;
+  font-family: "Montserrat", sans-serif;
+}
+.rate-this .rate-heading{
+  font-size: 18px;
+  line-height: 33px
+  color: #474c53;
+}
+.rate-this .rate-info{
+  font-size: 16px;
+  line-height: 24px;
+  color: #999;
+  margin-top: 10px;
+}
+.rate-us-list{
+  margin-top: 50px;
+}
+.rate-us-list button{
+  border-radius: 5px;
+  margin-right: 20px;
+  width: 150px;
+  padding: 13px 0;
+}
+.rate-us-list button .rate-face{
+  height: 19px;
+  width: 19px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.great-face{
+  background: url('../images/img-great.png') 0 0 no-repeat;
+}
+.avg-face{
+  background: url('../images/img-avg.png') 0 0 no-repeat;
+}
+.notuseful-face{
+  background: url('../images/not-useful-img.png') 0 0 no-repeat;
+}
+.info--rate{
+  color: #0196ff;
+  font: 700 18px/22px ;
+
+}
+@media (min-width: 1400px) {
+  .banner-wrapper{
+    padding: 200px 0 0 0!important;
+  }
+}
+@media (max-width: 990px) {
+  .banner-wrapper{
+    padding: 200px 0 0 0!im;
+  }
+  h4.banner-title{
+    font-size: 32px;
+  }
+  .mt-250{
+    margin-top: 30px;
+  }
+  .draup-indicator-slider__list{
+    padding: 40px 25px;
+  }
+  .draup-content-slider{
+    padding: 60px 20px 30px 40px;
+  }
+  .draup-content-slider .slick__arrows{
+    left: 30px;
+  }
+  .section__product__blog .section-heading{
+    margin: -30px 0 20px 0;
+  }
+  .product-card-list li{
+    margin: 20px!important;
+  }
+  .product-card-list .card-img-wrap{
+    width: auto;
+    max-width: 338px;
+    height: auto;
+    margin-top: 0;
+  }
+}
+@media (max-width: 768px) {
+  .section-solution .card{
+    padding: 25px;
+  }
+  .section__product__blog{
+    padding-top: 100px;
+  }
+  .product-card-list{
+    margin-top: 40px;
+  }
+  .section__product__blog .info--white{
+    color: #666 !important;
+  }
+  .product-card-list .card-body{
+    padding-top: 60px;
+  }
+  .author{
+    top:23px;
+    width: auto;
+    max-width:246px;
+  }
+  .testimonials-content{
+    padding: 25px 20px;
+  }
+  .section-testimonial p{
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .section-adv{
+    padding-top: 100px;
+  }
+}
