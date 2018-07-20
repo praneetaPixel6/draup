@@ -195,13 +195,14 @@ get_header('careers'); ?>
               <?php $trimmed = wp_trim_words( $shorttitle, $num_words = 2, $more = null ); ?>
                    <li class="cop-menu__list col-lg-12">
                      <div class="col-sm-5">
-                       <h3 class="text-capitalize"><?php the_title();?></h3>
+                       <h3 class="text-capitalize"><?php echo get_field('sub_title');?></h3>
                      </div>
                      <div class="col-sm-5">
-                       <h4 class="title title--sm text-capitalize"><?php echo get_field('sub_title');?></h4>
+                       <a href="<?php echo get_permalink();?>"><h4 class="title title--sm text-capitalize"><?php the_title();?></h4></a>
+
                      </div>
                      <div class="col-sm-2">
-                       <p class="info"><?php echo $excerpt; ?> </p><a href="<?php echo get_permalink();?>" class="link">learn more</a>
+                       <p class="info"><?php echo "2" ?> Opnings</p>
                      </div>
                   </li>
                   <?php } endwhile;?>
