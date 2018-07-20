@@ -32,6 +32,7 @@
     <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/plugins/date-picker.js"></script>
     <?php if(is_post_type_archive('careers')) { ?>
       <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/plugins/jquery.nicescroll.min.js"></script>
+      <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/careers.js"></script>
     <?php } ?>
 
     <!--START: Scripts- Custom-->
@@ -51,7 +52,7 @@
     <?php if(is_front_page()){ ?>
       <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/home.js"></script>
     <?php } ?>
-    <?php if(is_page_template()) { ?>
+    <?php if(is_page_template('about')) { ?>
       <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/about-us-slick-init.js"></script>
     <?php } ?>
     <?php if(is_post_type_archive('events')) { ?>

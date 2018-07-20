@@ -24,39 +24,49 @@ get_header('productdetail'); ?>
                             </div>
                             <div class="circle circle--sm circle--ringBlue circle--ring"></div>
                             <h4 class="text-capitalize banner-title banner-title--black mb-sm-2"><?php the_title();?></h4>
-                            <!-- <h4 class="title title--small mb-sm-2">heading Draup empowers the technology companies with real-time and actionable data</h4> -->
+                            <!-- <h4 class="title title-small mb-sm-2">heading Draup empowers the technology companies with real-time and actionable data</h4> -->
 
-                            <div class="product-metadata">
+                            <div class="product-metadata blog-details-content">
                                 <span class="product-metadata__title"><?php echo get_field('meta_title');?></span>
                                 <span class="product-metadata__date"><?php echo $product_date;?></span>
                             </div>
-                                
-                            
-                            
-                            <?php the_content();?>
-                            <div class="text-center btn-viewAll hidden-sm hidden-md hidden-lg">
-                                            <a href="#" class="btn btn--oval btn--outline btn--sm text-capitalize">Read more</a>    
-                                    </div>
+														<div class="product-content-wrap">
+															<div class="product_content clearfix">
+																	<?php the_content();?>
+																	<p class="info auther-info"><?php
+																		$user=get_field('select_author');
+									                  $auth = get_post($user); // gets author from post
+									                  $author_name = $auth->user_name;
+																		echo   "-".$author_name;?>
+																	</p>
+															</div>
+															<div class="product_content product-metadata__title clearfix"><?php echo get_field('cardcontent');?></div>
+															<div class="product_content product-metadata__title clearfix"><?php echo get_field('card_content_2');?></div>
+														</div>
+
+                            <div class="text-center btn-viewAll">
+                                <a href="#" class="btn btn--oval btn--outline btn--sm text-capitalize">Read the Report in Metacoach</a>
+                            </div>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-3">
                         <div class="card-wrapper">
-                            <h3 class="section-title">similar articles</h3>
+                            <h3 class="section-title similar-articles-heading">similar articles</h3>
                             <ul class="articles-menu">
-                            <?php 
-	  
-      			$the_query=new WP_Query(array('post_type'=>'productdetail','posts_per_page'   => '6'));
-      
-      			while($the_query->have_posts() ) : $the_query->the_post(); 
-            		{  
-             
-                
+                            <?php
+
+      			$the_query=new WP_Query(array('post_type'=>'products','posts_per_page'   => '6'));
+
+      			while($the_query->have_posts() ) : $the_query->the_post();
+            		{
+
+
             	$trimtitle = get_the_content();
-    
+
                 $shorttitle = wp_trim_words( $trimtitle, $num_words = 35, $more = '...' );
-                
-              
-                 
+
+
+
               ?>
                                 <li class="articles-menu__list">
                                     <a href="<?php echo get_permalink();?>" class="articles-menu__link"><?php the_title();?></a>
@@ -67,7 +77,7 @@ get_header('productdetail'); ?>
                     </div>
                 </div>
             </div>
-      
+
             <div class="container">
                 <div class="banner-wrapper--resourceUpdates product-article clearfix">
                     <div class="col-sm-12 col-md-9 p-0">
@@ -82,25 +92,25 @@ get_header('productdetail'); ?>
                             <div class="product-info-1">
                                 <br>
                                 <div class="row my-5">
-                                    <div class="col-xs-12 col-md-7 p-0">
+                                    <div class="col-xs-12 col-md-6 p-0">
                                         <h4 class="section-title section-title--sub py-sm-2"><?php echo get_field('second_card_title');?></h3>
                                             <p class="info lh-28"><?php echo get_field('title_description');?></p>
                                             <div class="m-1 text-center hidden-sm hidden-md hidden-lg ">
                                                 <a href="<?php echo get_field('request_button_text_link');?>" class="btn btn--oval btn--outline btn--xs text-capitalize"><?php echo get_field('request_button_text');?></a>
                                             </div>
-                                            
+
                                         <div class="m-1 text-left hidden-xs ">
                                             <a href="<?php echo get_field('request_button_text_link');?>" class="btn btn--oval btn--outline btn--sm text-capitalize"><?php echo get_field('request_button_text');?></a>
                                         </div>
-                                        
+
                                     </div>
-                                    <div class="col-xs-12 col-md-5 p-0 text-center m-0-auto">
+                                    <div class="col-xs-12 col-md-5 p-0 text-center col-md-offset-1">
                                         <img src="<?php echo get_field('about_image');?>" alt="About Banner" class="img-responsive m-0-auto mb-4 ">
                                         <p class="info"><?php echo get_field('about_image_text');?></p>
                                         <div class="m-1  hidden-xs">
                                             <a href="#" class="btn btn--oval btn--outline btn--xs text-capitalize p-e-n">request executive profile</a>
                                         </div>
-                                        
+
                                         <div class="m-1 hidden-sm hidden-md hidden-lg">
                                                 <a href="#" class="btn btn--oval btn--outline btn--xs text-capitalize p-e-n">request executive profile </a>
                                             </div>
@@ -134,14 +144,14 @@ get_header('productdetail'); ?>
                                             <p class="info lh-28"><?php echo get_field('help_us_subtitle');?>
                                                 <?php if(get_field('product_email_text')!=NULL){?>
                                                 <a href="mailto:<?php echo get_field('product_email_link');?>"
-                                                    class="link--playbook"><?php echo get_field('product_email_text');?></a> 
+                                                    class="link--playbook"><?php echo get_field('product_email_text');?></a>
                                                     <?php }?>
-                                                    <?php echo get_field('after_product_text');?> 
+                                                    <?php echo get_field('after_product_text');?>
                                                     <?php if(get_field('hardik_email_text')!=NULL){?>
                                                 <a href="mailto:<?php echo get_field('hardik_email_link');?>"
-                                                    class="link--playbook"><?php echo get_field('hardik_email_text');?></a> 
+                                                    class="link--playbook"><?php echo get_field('hardik_email_text');?></a>
                                                     <?php }?>
-                                                    <?php echo get_field('after_hardik_email_add_text');?> 
+                                                    <?php echo get_field('after_hardik_email_add_text');?>
                                                     <?php if(get_field('vamsee_email_text')!=NULL){?>
                                                 <a href="mailto:<?php echo get_field('vamsee_email_link');?>"
                                                     class="link--playbook"><?php echo get_field('vamsee_email_text');?></a>

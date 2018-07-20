@@ -233,7 +233,7 @@ get_header('about'); ?>
             <div class="col-sm-8 col-sm-offset-2 bg-white testimonials-content">
               <div class="col-sm-3">
                 <div class="testimonial-img-wrap hidden-xs">
-                  <img src="http://192.168.1.100/new-draup/wp-content/uploads/2018/07/testimonial-img.png" alt="testimonial">
+                  <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/./images/testimonial-img.png" alt="testimonial">
                 </div>
               </div>
               <?php  $testimonials = get_field('testimonial');?>

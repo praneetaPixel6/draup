@@ -767,7 +767,7 @@ function create_careers_taxonomies() {
 	);
 
 	$rewrite = array(
-			'slug'                       => 'careers-category',
+			'slug'                       => 'careers_category',
 			'with_front'                 => true,
 			'hierarchical'               => false,
 	);

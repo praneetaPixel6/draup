@@ -94,5 +94,5 @@ wp-content/plugins/
 wp-content/themes/twenty*/
 
 # ignore uploads folder
-!wp-content/uploads
+wp-content/uploads
 wp-config.php

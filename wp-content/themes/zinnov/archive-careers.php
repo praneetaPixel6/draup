@@ -155,6 +155,91 @@ get_header('careers'); ?>
         </div>
       </section>
 
+
+      <?php
+          $terms = get_terms("list_careers",array( 'parent' => 0 ));
+      ?>
+
+
+
+                          <?php
+
+        $paged = ( isset( $my_query_array['paged'] ) && !empty( $my_query_array['paged'] ) ) ? $my_query_array['paged'] : 1;
+
+
+                $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
+                $terms = get_terms("list_careers",array( 'parent' => 0 ));
+                $i=1;
+                $category="";
+
+                         foreach ( $terms as $term ) {
+                         if($term->name==$_GET["cat"]){
+
+                      $category=$term->slug;
+                            }
+                           }
+
+                if(isset($_GET["cat"])){
+                $the_query=new WP_Query(array('post_type'=>'careers','posts_per_page'=>'5','paged' => $paged,'tax_query' => array(array ('taxonomy' => 'list_careers','field' => 'slug','terms' => "$category"))));
+                   }
+
+                else if(isset($_GET["tag"])){
+              $the_query=new WP_Query(array('post_type'=>'careers','posts_per_page'=>'6','paged' => $paged,'tag' => $_GET["tag"]));
+                   }
+                else{
+              $the_query=new WP_Query(array('post_type'=>'careers','posts_per_page'=>'6','paged' => $paged));
+                 }
+                $j=0;
+                while($the_query->have_posts() ) : $the_query->the_post(); $do_not_duplicate =$menu_ID;
+
+                {
+              $blog_date = get_the_date( 'd M Y', get_the_ID() );
+              $trimtitle = get_the_content();
+
+              $shorttitle = wp_trim_words( $trimtitle, $num_words = 14, $more = '… ' );
+                $exist="";
+              $menu_id = get_the_id();
+
+
+         if(isset($_GET["tag"])){
+
+
+         $tag = wp_get_post_tags($menu_id ,"tag");
+
+           foreach ( $tag as $tag ) {
+
+         if($tag->name==$_GET["tag"]){
+
+         $exist="exist";
+
+          }
+
+             }
+           }
+
+
+           else{
+        $exist="exist";
+        }
+
+
+               ?>
+
+               <?php
+
+          if($prev_title!=get_the_ID())
+          {
+                ?>
+
+                 <!--Start: Post 1-->
+
+
+
+        <?php }if($j==0 && $paged==1){
+    $j++; continue; }  $j++;?>
+        <?php  } endwhile; ?>
+
       <!--start: Current openings-->
       <section class="section current-opening-section">
         <div class="container">
@@ -163,44 +248,48 @@ get_header('careers'); ?>
               <div class="text-center">
                 <h3 class="section-title setion-title--md section-heading--white"><?php echo ot_get_option('section_title');?></h3>
               </div>
-              <div class="current-openings-wrapper">
-                <ul class="cop-menu">
-                  <li class="col-lg-12 opening-header">
-                    <div class="col-sm-5">
-                      <h3>Team</h3>
-                    </div>
-                    <div class="col-sm-5">
-                      <h3>Role</h3>
-                    </div>
-                    <div class="col-sm-2">
-                      <h3>No.Openings</h3>
-                    </div>
-                  </li>
-                <?php
-                    $careers = get_posts(array('post_type' => 'careers'));
-                    $career_cat = get_categories(	array('post_type' => 'careers'));
-                    //echo $career_cat;
-                    //echo $cats[0];
-              		?>
 
-                <li class="cop-menu__list col-lg-12">
-                  <div class="col-sm-5">
-                    <h3 class="text-capitalize"><?php echo $career_cat;?></h3>
-                  </div>
-                  <ul  class="opening-role-list">
-
-                    <li class="opening-role">
+                <div class="current-openings-wrapper">
+                  <ul class="cop-menu">
+                    <li class="col-lg-12 opening-header">
                       <div class="col-sm-5">
-                        <a href="<?php echo get_permalink();?>"><h4 class="title title--sm text-capitalize"><?php get_the_title($career_cat->ID);;?></h4></a>
+                        <h3>Team</h3>
+                      </div>
+                      <div class="col-sm-5">
+                        <h3>Role</h3>
                       </div>
                       <div class="col-sm-2">
-                        <p class="info"><?php echo "2" ?> Opnings</p>
+                        <h3>No.Openings</h3>
                       </div>
                     </li>
+                    <?php
+                    $terms = get_terms("list_careers",array( 'parent' => 0 ));
+                    $k=1;
+                    foreach ( $terms as $term ) {
+                      $termname = strtolower($term->name);
+                      $termname = str_replace(' ', '-', $termname);
 
-                  </ul>
-                </li>
+                      $blog_status="";
+                      if($term->name==$_GET['cat'])
+                      {
+                        $blog_status="active";
+                      }
+                     ?>
+                     <li class="col-lg-12">
+                      <div class="col-sm-5">
+                        <h3 class="text-capitalize title title--sm"><a href="<?php echo get_option( 'siteurl' );?>/careers?cat=<?php echo $term->name; ?>" class="category-menu__link" id="<?php echo $termname; ?>"><?php echo $term->name; ?></a></h3>
+                      </div>
+                      <ul  class="opening-role-list col-sm-5">
+                        <li class="opening-role">
+                            <a href="<?php echo get_permalink();?>"><h4 class="title title--sm text-capitalize"><?php the_title();?></h4></a>
 
+                        </li>
+                      </ul>
+                      <div class="col-sm-2">
+                        <p class="info"><?php echo get_field('no_of_postion');?>Openings</p>
+                      </div>
+                  </li>
+                <?php $k++; } ?>
                 </ul>
               </div>
             </div>

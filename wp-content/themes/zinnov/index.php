@@ -297,10 +297,9 @@ get_header();?>
                   <div class="bar__line bar__line--white"></div>
                 </div>
                 <div class="circle circle--sm circle--circlePink circle--circlePink--top"></div>
-                <div class="circle circle--lg circle--ring"></div>
                 <div class="circle circle--sm circle--circlePink circle--circlePink--bottom "></div>
                 <div class="circle circle--lg circle--ring circle--ring-2"></div>
-                <h3 class="section-heading section-heading--white"><?php echo $get_text;?></h3>
+                <h3 class="section-heading--white"><?php echo $get_text;?></h3>
                 <p class="info info--white"><?php echo $get_sub_text;?></p>
                 <div class="btn-wrapper"><a href="<?php echo $get_button_link;?>" class="btn btn--white btn--lg"><?php echo $get_button_text;?></a></div>
               </div>

@@ -94,8 +94,8 @@ get_header('blog'); ?>
      <div class="thumbnail card-thumbnail card-thumbnail--noMargin card-thumbnail-updates clearfix">
         <div class="card-circle">
            <div class="circle circle--sm circle--filled circle--circleBlue"></div>
-               <div class="circle circle--md circle--filled circle--circleOrange"></div>
-                   </div>
+            <div class="circle circle--md circle--filled circle--circleOrange"></div>
+        </div>
                           <ul class="blog-post">
 
                           <?php
@@ -204,7 +204,7 @@ get_header('blog'); ?>
 		  <?php wp_reset_postdata(); ?>
        <?php endif; ?>
 			       
-                        </div>
+  </div>
                       </div>
                     </div>
                   </div>
