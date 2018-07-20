@@ -71,15 +71,15 @@ get_header();?>
                     <div class="content-slider-wrapper">
                       <ul class="content-slider-menu clearfix">
                         <li class="content-slider-menu__list">
-                          <h4 class="text-capitalize banner-title"><?php echo get_field('banner_title1');?></strong></h4>
+                          <h4 class="text-capitalize banner-title"><?php echo get_field('banner_title1');?></h4>
                           <p class="banner-info"><?php echo get_field('banner_desc1');?></p>
                         </li>
                         <li class="content-slider-menu__list">
-                          <h4 class="text-capitalize banner-title"><?php echo get_field('banner_title2');?></strong></h4>
+                          <h4 class="text-capitalize banner-title"><?php echo get_field('banner_title2');?></h4>
                           <p class="banner-info"><?php echo get_field('banner_desc2');?></p>
                         </li>
                         <li class="content-slider-menu__list">
-                          <h4 class="text-capitalize banner-title"><?php echo get_field('banner_title3');?></strong></h4>
+                          <h4 class="text-capitalize banner-title"><?php echo get_field('banner_title3');?></h4>
                           <p class="banner-info"><?php echo get_field('banner_desc3');?></p>
                         </li>
                       </ul>
@@ -126,7 +126,7 @@ get_header();?>
                           </div>
                           <img class="card-img-top" src="<?php echo get_field('solutions_image1');?>" alt="<?php echo get_field('solutions_title1');?>">
                           <div class="card-body">
-                            <h4 class="card-title"><?php echo get_field('solutions_title1');?></h4
+                            <h4 class="card-title"><?php echo get_field('solutions_title1');?></h4>
                             <p class="card-text"><?php echo get_field('solutions_description1');?></p>
                             <a href="<?php echo get_field('button_link1');?>" class="link"><?php echo get_field('button_text1');?></a>
                           </div>
@@ -166,7 +166,7 @@ get_header();?>
         <div class="container">
           <div class="row">
             <div class="text-center">
-              <h4 class="section-heading"><?php echo $section_heading;?></span></h4>
+              <h4 class="section-heading"><?php echo $section_heading;?></h4>
             </div>
             <div class="col-sm-10 col-sm-offset-1 flex-slider">
               <div class="col-sm-6 hidden-xs">

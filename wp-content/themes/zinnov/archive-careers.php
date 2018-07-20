@@ -177,8 +177,7 @@ get_header('careers'); ?>
                     </div>
                   </li>
                 <?php
-              			$the_query=new WP_Query(array('post_type'=>'careers','posts_per_page'   => '9'));
-
+              			$the_query =new WP_Query(array('post_type'=>'careers'));
               			while($the_query->have_posts() ) : $the_query->the_post();
             		{
                     $product_date = get_the_date( 'd M Y', get_the_ID() );
@@ -190,21 +189,31 @@ get_header('careers'); ?>
                   array_shift($words); // 1st word
                   array_shift($words); // 2nd word
                   $excerpt = implode(' ', $words);
+                  echo get_categories(	$the_query);
               ?>
 
-              <?php $trimmed = wp_trim_words( $shorttitle, $num_words = 2, $more = null ); ?>
+              <?php for ($i=0; $i < ; $i++) {
+                // code...
+              } ?>
                    <li class="cop-menu__list col-lg-12">
                      <div class="col-sm-5">
                        <h3 class="text-capitalize"><?php echo get_field('sub_title');?></h3>
                      </div>
-                     <div class="col-sm-5">
-                       <a href="<?php echo get_permalink();?>"><h4 class="title title--sm text-capitalize"><?php the_title();?></h4></a>
+                      <ul  class="opning-role-list">
 
-                     </div>
-                     <div class="col-sm-2">
-                       <p class="info"><?php echo "2" ?> Opnings</p>
-                     </div>
-                  </li>
+                       <li class="opning-role">
+                         <div class="col-sm-5">
+                           <a href="<?php echo get_permalink();?>"><h4 class="title title--sm text-capitalize"><?php the_title();?></h4></a>
+                         </div>
+                         <div class="col-sm-2">
+                           <p class="info"><?php echo "2" ?> Opnings</p>
+                         </div>
+                       </li>
+
+
+
+                     </ul>
+                   </li>
                   <?php } endwhile;?>
 
                 </ul>
