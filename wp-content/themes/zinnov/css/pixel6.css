@@ -953,9 +953,6 @@ h4.banner-title{
   .product-card-list{
     margin-top: 40px;
   }
-  .section__product__blog .info--white{
-    color: #666 !important;
-  }
 }
 @media (max-width: 990px) {
   .banner-wrapper{
@@ -1032,6 +1029,9 @@ h4.banner-title{
   }
   .draup-life-block:first-child{
     margin-top: 0;
+  }
+   .section__product__blog .info--white{
+    color: #666 !important;
   }
 }
 

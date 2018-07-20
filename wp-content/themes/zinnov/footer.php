@@ -27,13 +27,15 @@
     <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/plugins/jquery.js"></script>
    
     <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/plugins/bootstrap.js"></script>
-    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/plugins/slick.js"></script>
-    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/plugins/parsley.js"></script>
-    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/plugins/date-picker.js"></script>
-    <?php if(is_post_type_archive('careers')) { ?>
+     <?php if(is_post_type_archive('careers')) { ?>
       <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/plugins/jquery.nicescroll.min.js"></script>
       <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/careers.js"></script>
     <?php } ?>
+    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/plugins/slick.js"></script>
+    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/plugins/parsley.js"></script>
+    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/plugins/date-picker.js"></script>
+
+   
 
     <!--START: Scripts- Custom-->
     <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/banner-slick-init.js"></script>
@@ -41,7 +43,6 @@
     <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/why-draup-slider-init.js"></script>
     <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/home-header-animation.js"></script>
     <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/login.js"></script>
-    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/careers.js"></script>
     <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/plugins/modernizr.js"></script>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
@@ -52,9 +53,7 @@
     <?php if(is_front_page()){ ?>
       <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/home.js"></script>
     <?php } ?>
-    <?php if(is_page_template('about')) { ?>
       <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/about-us-slick-init.js"></script>
-    <?php } ?>
     <?php if(is_post_type_archive('events')) { ?>
       <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/plugins/calendar.js"></script>
       <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/calendar-init.js"></script>
