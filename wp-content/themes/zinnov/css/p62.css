@@ -235,7 +235,11 @@
 .info--rate{
   color: #0196ff;
   font: 700 18px/22px ;
-
+}
+/*  career Section*/
+.current-opning-section{
+  background: url('../images/bg-blue-pattern-simple.png') 0 0 no-repeat;
+  background-size: cover;
 }
 @media (min-width: 1400px) {
   .banner-wrapper{

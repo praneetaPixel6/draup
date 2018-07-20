@@ -33,12 +33,12 @@ get_header('careers'); ?>
                     </div>
                     <div class="clearfix career-blog">
                       <div class="col-sm-5">
-                        <div class="info-wrapper"> 
+                        <div class="info-wrapper">
                           <p class="info"><?php echo ot_get_option('blog_text1');?> </p>
                         </div>
                       </div>
                       <div class="col-sm-7 career-blog-right">
-                        <div class="info-wrapper"> 
+                        <div class="info-wrapper">
                           <p class="info"><?php echo ot_get_option('blog_text2');?></p>
                         </div>
                       </div>
@@ -134,11 +134,11 @@ get_header('careers'); ?>
                   <div class="bar__line"></div>
                 </div>
                 <div class="circle circle--md circle--filled circle--circleBlue">
-                  
+
                 </div>
               </div>
             </div>
-            <?php 
+            <?php
             if (function_exists('get_option_tree')){
               $careers_list = ot_get_option( 'careersdrup_list', array() );
               if ( ! empty( $careers_list ) ) { ?>
@@ -156,27 +156,34 @@ get_header('careers'); ?>
       </section>
 
       <!--start: Current openings-->
-      <section class="section">
+      <section class="section current-opning-section">
         <div class="container">
           <div class="row">
             <div class="col-sm-10 col-sm-offset-1 col-md-12 col-md-offset-0">
               <div class="text-center">
-                <h3 class="section-title setion-title--md"><?php echo ot_get_option('section_title');?></h3>
+                <h3 class="section-title setion-title--md section-heading--white"><?php echo ot_get_option('section_title');?></h3>
               </div>
               <div class="current-openings-wrapper">
                 <ul class="cop-menu">
+                  <li class="col-lg-12 opning-header">
+                    <div class="col-sm-5">
+                      <h3>Team</h3>
+                    </div>
+                    <div class="col-sm-5">
+                      <h3>Role</h3>
+                    </div>
+                    <div class="col-sm-2">
+                      <h3>No.Opnings</h3>
+                    </div>
+                  </li>
                 <?php
+              			$the_query=new WP_Query(array('post_type'=>'careers','posts_per_page'   => '9'));
 
-      			$the_query=new WP_Query(array('post_type'=>'careers','posts_per_page'   => '9'));
-
-      			while($the_query->have_posts() ) : $the_query->the_post();
+              			while($the_query->have_posts() ) : $the_query->the_post();
             		{
-
-                $product_date = get_the_date( 'd M Y', get_the_ID() );
-            	$trimtitle = get_the_content();
-
-                $shorttitle = wp_trim_words( $trimtitle, $num_words = 35, $more = '… ' );
-
+                    $product_date = get_the_date( 'd M Y', get_the_ID() );
+                    $trimtitle = get_the_content();
+                    $shorttitle = wp_trim_words( $trimtitle, $num_words = 35, $more = '… ' );
 
                   $excerpt = $shorttitle;
                   $words = explode(' ', $excerpt);
@@ -184,11 +191,18 @@ get_header('careers'); ?>
                   array_shift($words); // 2nd word
                   $excerpt = implode(' ', $words);
               ?>
+
               <?php $trimmed = wp_trim_words( $shorttitle, $num_words = 2, $more = null ); ?>
-                   <li class="cop-menu__list col-md-4 col-sm-6">
-                    <h3 class="title text-capitalize"><?php the_title();?></h3>
-                    <h4 class="title title--sm text-capitalize"><?php echo get_field('sub_title');?></h4>
-                    <p class="info"><?php echo $excerpt; ?> </p><a href="<?php echo get_permalink();?>" class="link">learn more</a>
+                   <li class="cop-menu__list col-lg-12">
+                     <div class="col-sm-5">
+                       <h3 class="text-capitalize"><?php the_title();?></h3>
+                     </div>
+                     <div class="col-sm-5">
+                       <h4 class="title title--sm text-capitalize"><?php echo get_field('sub_title');?></h4>
+                     </div>
+                     <div class="col-sm-2">
+                       <p class="info"><?php echo $excerpt; ?> </p><a href="<?php echo get_permalink();?>" class="link">learn more</a>
+                     </div>
                   </li>
                   <?php } endwhile;?>
 
@@ -197,7 +211,7 @@ get_header('careers'); ?>
             </div>
           </div>
         </div>
-      </section>    
+      </section>
     </main>
 
 <?php get_footer('careers'); ?>

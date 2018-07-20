@@ -20,16 +20,16 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'new-draup_db');
+define('DB_NAME', 'prelogin_lollypop');
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', 'draup_prelogin');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'toit@mysql');
+define('DB_PASSWORD', 'WfB3cN7tE6TFhX2S');
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'gatewaymysql.cmfutgtnbkyw.us-east-2.rds.amazonaws.com');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
