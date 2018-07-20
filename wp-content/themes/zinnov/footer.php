@@ -14,18 +14,7 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-10 col-sm-offset-1">
-           <!--  <ul class="footer-menu">  -->
-
             <?php wp_nav_menu( array( 'theme_location' => 'footer','menu_class' => 'footer-menu','li_class'=>'footer-menu__list') ); ?>
-            <!--  <li class="footer-menu__list"><a href="<?php echo get_option( 'siteurl' );?>/<?php echo ot_get_option('home_menulink')?>" class="footer-menu__link"><?php echo ot_get_option('home_text')?></a></li>
-              <li class="footer-menu__list"><a href="<?php echo get_option( 'siteurl' );?>/<?php echo ot_get_option('about_menulink')?>" class="footer-menu__link"><?php echo ot_get_option('about_text')?></a></li>
-              <li class="footer-menu__list"><a href="<?php echo get_option( 'siteurl' );?>/<?php echo ot_get_option('blog_menulink')?>" class="footer-menu__link"><?php echo ot_get_option('blog_text')?></a></li>
-              <li class="footer-menu__list"><a href="<?php echo get_option( 'siteurl' );?>/<?php echo ot_get_option('whitepapers_menulink')?>" class="footer-menu__link"><?php echo ot_get_option('whitepapers_text')?></a></li>
-              <li class="footer-menu__list"><a href="<?php echo get_option( 'siteurl' );?>/<?php echo ot_get_option('faq_menulink')?>" class="footer-menu__link"><?php echo ot_get_option('faq_text')?></a></li>
-              <li class="footer-menu__list"><a href="<?php echo get_option( 'siteurl' );?>/<?php echo ot_get_option('contact_menulink')?>" class="footer-menu__link"><?php echo ot_get_option('contact_text')?></a></li>
-              <li class="footer-menu__list"><a href="<?php echo get_option( 'siteurl' );?>/<?php echo ot_get_option('disclaimer_menulink')?>" class="footer-menu__link"><?php echo ot_get_option('disclaimer_text')?></a></li>
-              <li class="footer-menu__list"><a href="<?php echo get_option( 'siteurl' );?>/<?php echo ot_get_option('privacy_menulink')?>" class="footer-menu__link"><?php echo ot_get_option('privacy_text')?></a></li> -->
-           <!-- </ul>  -->
             <div class="copy-right text-center">
               <p class="copy-right__content">&#9400;2017 Zinnov. All Rights Reserved</p>
             </div>
@@ -34,18 +23,16 @@
       </div>
     </footer>
 
-
   <!--START: Scripts- Plugins-->
     <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/plugins/jquery.js"></script>
-
-    
+   
     <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/plugins/bootstrap.js"></script>
     <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/plugins/slick.js"></script>
     <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/plugins/parsley.js"></script>
     <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/plugins/date-picker.js"></script>
     <?php if(is_post_type_archive('careers')) { ?>
       <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/plugins/jquery.nicescroll.min.js"></script>
-    <?php }?>
+    <?php } ?>
 
     <!--START: Scripts- Custom-->
     <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/banner-slick-init.js"></script>
@@ -61,28 +48,27 @@
     <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/plugins/select.js"></script>
 
    <!-- Pixel6 JS-->
-   <?php if(is_front_page()){?>
-    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/home.js"></script>
+    <?php if(is_front_page()){ ?>
+      <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/home.js"></script>
     <?php } ?>
-    <?php if(is_page_template()) {?>
+    <?php if(is_page_template()) { ?>
       <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/about-us-slick-init.js"></script>
-    <?}?>
-  <?php if(is_post_type_archive('events')) { ?>
-    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/plugins/calendar.js"></script>
-    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/calendar-init.js"></script>
-    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/date-picker-init.js"></script>
-    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/life-slider.js"></script>
-<?php } ?>
-<?php if(is_post_type_archive('careers')) { ?>
-  <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/life-slider.js"></script>
-<?php } ?>
-   <script type="text/javascript">
+    <?php } ?>
+    <?php if(is_post_type_archive('events')) { ?>
+      <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/plugins/calendar.js"></script>
+      <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/calendar-init.js"></script>
+      <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/date-picker-init.js"></script>
+      <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/life-slider.js"></script>
+    <?php } ?>
+    <?php if(is_post_type_archive('careers')) { ?>
+      <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/life-slider.js"></script>
+    <?php } ?>
+    <script type="text/javascript">
+     jQuery('.footer .container .footer-menu li').addClass('footer-menu__list');
+     jQuery('.footer .container .footer-menu li.footer-menu__list a').addClass('footer-menu__link');
+     jQuery('.footer .container div').removeClass('menu-footer-menu-container');
+    </script>
 
-   jQuery('.footer .container .footer-menu li').addClass('footer-menu__list');
-
-   jQuery('.footer .container .footer-menu li.footer-menu__list a').addClass('footer-menu__link');
-   jQuery('.footer .container div').removeClass('menu-footer-menu-container');
-</script>
 <?php wp_footer(); ?>
    </body>
 </html>

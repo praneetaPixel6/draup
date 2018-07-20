@@ -156,7 +156,7 @@ get_header('careers'); ?>
       </section>
 
       <!--start: Current openings-->
-      <section class="section current-opning-section">
+      <section class="section current-opening-section">
         <div class="container">
           <div class="row">
             <div class="col-sm-10 col-sm-offset-1 col-md-12 col-md-offset-0">
@@ -165,7 +165,7 @@ get_header('careers'); ?>
               </div>
               <div class="current-openings-wrapper">
                 <ul class="cop-menu">
-                  <li class="col-lg-12 opning-header">
+                  <li class="col-lg-12 opening-header">
                     <div class="col-sm-5">
                       <h3>Team</h3>
                     </div>
@@ -173,25 +173,25 @@ get_header('careers'); ?>
                       <h3>Role</h3>
                     </div>
                     <div class="col-sm-2">
-                      <h3>No.Opnings</h3>
+                      <h3>No.Openings</h3>
                     </div>
                   </li>
                 <?php
                     $careers = get_posts(array('post_type' => 'careers'));
-                    $cats = get_categories(	array('post_type' => 'careers'));
-                    echo $careers;
+                    $career_cat = get_categories(	array('post_type' => 'careers'));
+                    //echo $career_cat;
                     //echo $cats[0];
               		?>
 
                 <li class="cop-menu__list col-lg-12">
                   <div class="col-sm-5">
-                    <h3 class="text-capitalize"><?php echo $cat;?></h3>
+                    <h3 class="text-capitalize"><?php echo $career_cat;?></h3>
                   </div>
-                  <ul  class="opning-role-list">
+                  <ul  class="opening-role-list">
 
-                    <li class="opning-role">
+                    <li class="opening-role">
                       <div class="col-sm-5">
-                        <a href="<?php echo get_permalink();?>"><h4 class="title title--sm text-capitalize"><?php get_the_title($careers->ID);;?></h4></a>
+                        <a href="<?php echo get_permalink();?>"><h4 class="title title--sm text-capitalize"><?php get_the_title($career_cat->ID);;?></h4></a>
                       </div>
                       <div class="col-sm-2">
                         <p class="info"><?php echo "2" ?> Opnings</p>
@@ -200,7 +200,7 @@ get_header('careers'); ?>
 
                   </ul>
                 </li>
-              
+
                 </ul>
               </div>
             </div>
