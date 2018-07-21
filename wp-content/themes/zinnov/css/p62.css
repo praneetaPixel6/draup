@@ -7,9 +7,9 @@
 }
 /* Product Page */
 .section-resourceUpdates{
-  background: url('../images/bg-orange-simple.png') 0 -300px no-repeat;
-  background-size: cover;
-
+  background: url('../images/bg-orange-simple.png') 0 -900px no-repeat;
+  background-size: 100% 80%;
+  position: relative;
 }
 .section-resourceUpdates .banner-title--black{
   color: #333;
@@ -37,6 +37,14 @@
   margin-bottom: 10px;
   color: #666;
 }
+.section-resourceUpdates .product_content p{
+font-size: 300 12px/29px Montserrat-Light ,sans-serif;
+}
+.section-resourceUpdates .product_content .natural-list{
+  list-style-type: disc;
+  padding-left: 15px;
+  margin-left: 10px;
+}
 .section-resourceUpdates .btn-viewAll .btn{
   width: auto;
   padding: 14px 4px;
@@ -44,4 +52,147 @@
 }
 .similar-articles-heading{
   margin-top: 0;
+}
+.product-info-1 h4.py-sm-2{
+  margin-top: 0;
+}
+.section-resourceUpdates::before{
+  top: 41%;
+}
+.product-info-1 p{
+  font: 300 15px/28px  Montserrat-Light, sans-serif;
+  color: #797979;
+}
+/* Talent Page */
+.about-banner-wrapper__heading{
+  margin-top: 200px;
+  display: block;
+}
+.about-banner-wrapper__heading .heading{
+  font: 500 46px/63px Montserrat-Regular,sans-serif;
+}
+.about-banner-wrapper__heading p{
+  margin-top: 10px;
+  font-size: 18px;
+}
+.talent-section .about-draup-wrapper{
+  padding: 10px 80px 50px 80px;
+}
+.talent-section .about-draup-wrapper p{
+  margin-top: 40px;
+  font: 300 16px/28px Montserrat-Light;
+}
+.section-about-features::before{
+  background: none;
+}
+.section-about-features{
+  background-color: #f1f5f6;
+}
+.feacture-acc-header{
+  margin: 80px 0 50px 0;
+}
+.about-features-wrapper .feacture-img-wrap{
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+} 
+.about-features-wrapper h4{
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 13px;
+  font: 300 20px/32px "Montserrat-Light";
+}
+.feacture-acc-content .card {  
+  border-bottom: 0.7px solid #999;
+  margin-right: 20px;
+}
+.feacture-acc-content .card:last-child{
+  border:none;
+}
+.feacture-acc-content h5{
+  font: bold 16px/22px Montserrat-Bold,sans-serif;
+  color: #333;  
+}
+.feacture-acc-content .card-body{
+  font: 300 14px/26px Montserrat-Light,sans-serif;
+  color: #999;
+  padding-bottom: 15px;
+}
+.feacture-acc-content button{
+  color: #333;
+  border: none; 
+  box-shadow: none;
+  background: none;
+  padding: 16px 0;
+  cursor: pointer;
+  transition: color 0.7 ease-in-out;
+}
+.feacture-acc-content button:hover{
+  color: #111;
+}
+.section-how-it-works::before{
+  background: none;
+}
+.section__product .section-head p{
+  color: #fff;
+  max-width: 550px;
+  margin: 20px auto;  
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 300;
+  text-align: center;
+}
+.section-how-it-works .section-head p{
+  line-height: 28px;
+  color: #666; 
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.how-it-works__list>.col-sm-5 h3{
+  margin-top: 20px;
+}
+.how-it-works__list >.col-sm-6 p{
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  color: #666;
+}
+@media (max-width: 990px) {
+  .section-resourceUpdates .circle-wrapper.circle-wrapper--article{
+    left: auto;
+    right: -33px;
+  }
+}
+@media(max-width: 767px){
+  .talent-section .about-banner-wrapper__heading{
+    margin-top: 70px;
+  }
+  .talent-section .about-banner-wrapper__heading h1{
+    font-size: 28px;
+    line-height: 38px;
+  }
+  .talent-section .about-draup-wrapper{
+    padding: 30px 40px;
+  }
+  .how-it-works__list>.col-sm-5 h3{
+    margin-top: 5px;
+  }
+}
+@media(max-width: 460px){
+  .section__product{
+    padding-top: 25px;
+  }
+  .section__product .section-head .section-title{
+    margin: 0;
+  } 
+  .section__product .section-head p{
+    color: #666;
+  }
+  .section__product .product-card-list{
+    margin-top: 30px;
+  }
 }

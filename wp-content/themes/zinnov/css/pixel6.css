@@ -388,7 +388,7 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
 .img-slide{
   width: 675px;
   height: 524px;
-  background-size: cover; 
+  background-size: cover;
 }
 #img-1{
   background: url('../img/draup-slid1.png') no-repeat;
@@ -500,7 +500,7 @@ h4.banner-title{
   margin-top: 250px;
 }
 .solution-content .bar{
-  position: absolute;  
+  position: absolute;
 }
 .left-bar{
   left: -6px;
@@ -820,6 +820,10 @@ h4.banner-title{
 .current-opening-section{
   background: url('../images/bg-blue-pattern-simple.png') 0 0 no-repeat;
   background-size: cover;
+  position: relative;
+}
+.section-bannerPatch .sector-img{
+  top:85px;
 }
 .whyjoin-para{
   background-color: #fff;
@@ -934,7 +938,7 @@ h4.banner-title{
   .navbar--gray .navbar-right>li>a{
     color: #fff;
   }
-  
+
   .banner-slider .link{
     padding-bottom: 15px;
   }
@@ -956,7 +960,7 @@ h4.banner-title{
 }
 @media (max-width: 990px) {
   .banner-wrapper{
-    padding: 200px 0 0 0!im;
+    padding: 200px 0 0 0;
   }
   h4.banner-title{
     font-size: 32px;
@@ -1033,6 +1037,5 @@ h4.banner-title{
    .section__product__blog .info--white{
     color: #666 !important;
   }
+
 }
-
-

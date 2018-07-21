@@ -14,15 +14,16 @@ get_header('productdetail'); ?>
 	 <main>
         <!--Start: Banner-->
         <section class="section-article1 section-resourceUpdates">
+					<div class="sector-img "></div>
             <div class="container">
                 <div class="banner-wrapper banner-wrapper--sm banner-wrapper--resourceUpdates mt-5 product-article clearfix">
                     <div class="col-sm-12 col-md-9">
                         <div class="card-wrapper card-wrapper--padding mb-sm-30">
-                            <div class="circle-wrapper circle-wrapper--article ">
+                            <div class="circle-wrapper circle-wrapper--article  hidden-xs">
                                 <div class="circle--sm circle circle--circleBlue"></div>
                                 <div class="circle--md circle circle--circleOrange"></div>
                             </div>
-                            <div class="circle circle--sm circle--ringBlue circle--ring"></div>
+                            <div class="circle circle--sm circle--ringBlue circle--ring hidden-xs"></div>
                             <h4 class="text-capitalize banner-title banner-title--black mb-sm-2"><?php the_title();?></h4>
                             <!-- <h4 class="title title-small mb-sm-2">heading Draup empowers the technology companies with real-time and actionable data</h4> -->
 
@@ -82,7 +83,7 @@ get_header('productdetail'); ?>
                 <div class="banner-wrapper--resourceUpdates product-article clearfix">
                     <div class="col-sm-12 col-md-9 p-0">
                         <div class="card-wrapper card-wrapper--padding mb-sm-30 md-lg-60">
-                            <div class="circle-wrapper circle-wrapper--article1 ">
+                            <div class="circle-wrapper circle-wrapper--article1 hidden-xs">
                                 <div class="circle--sm circle circle--circleBlue"></div>
                                 <div class="circle--md circle circle--circleOrange"></div>
                             </div>
@@ -93,7 +94,7 @@ get_header('productdetail'); ?>
                                 <br>
                                 <div class="row my-5">
                                     <div class="col-xs-12 col-md-6 p-0">
-                                        <h4 class="section-title section-title--sub py-sm-2"><?php echo get_field('second_card_title');?></h3>
+                                        <h4 class="section-title section-title--sub py-sm-2" ><?php echo get_field('second_card_title');?></h3>
                                             <p class="info lh-28"><?php echo get_field('title_description');?></p>
                                             <div class="m-1 text-center hidden-sm hidden-md hidden-lg ">
                                                 <a href="<?php echo get_field('request_button_text_link');?>" class="btn btn--oval btn--outline btn--xs text-capitalize"><?php echo get_field('request_button_text');?></a>
@@ -108,11 +109,11 @@ get_header('productdetail'); ?>
                                         <img src="<?php echo get_field('about_image');?>" alt="About Banner" class="img-responsive m-0-auto mb-4 ">
                                         <p class="info"><?php echo get_field('about_image_text');?></p>
                                         <div class="m-1  hidden-xs">
-                                            <a href="#" class="btn btn--oval btn--outline btn--xs text-capitalize p-e-n">request executive profile</a>
+                                            <a href="#" class="btn btn--oval btn--outline btn--xs text-capitalize ">request executive profile</a>
                                         </div>
 
                                         <div class="m-1 hidden-sm hidden-md hidden-lg">
-                                                <a href="#" class="btn btn--oval btn--outline btn--xs text-capitalize p-e-n">request executive profile </a>
+                                                <a href="#" class="btn btn--oval btn--outline btn--xs text-capitalize ">request executive profile </a>
                                             </div>
                                     </div>
                                 </div>
@@ -126,7 +127,7 @@ get_header('productdetail'); ?>
                                     <div class="col-xs-12 col-md-7">
                                         <h4 class="section-title section-title--sub py-sm-2"><?php echo get_field('braindesk_title');?></h3>
                                             <?php echo get_field('braindesk_description');?>
-                                            <div class="m-1 text-center">
+                                            <div class="m-1">
                                                 <a href="<?php echo get_field('access_bank_button_text_link');?>" class="btn btn--oval btn--outline btn--sm text-capitalize"> <?php echo get_field('access_bank_button_text');?></a>
                                             </div>
                                     </div>
@@ -156,7 +157,7 @@ get_header('productdetail'); ?>
                                                 <a href="mailto:<?php echo get_field('vamsee_email_link');?>"
                                                     class="link--playbook"><?php echo get_field('vamsee_email_text');?></a>
                                                     <?php }?>
-                                                    </p>
+                                            </p>
                                     </div>
                                 </div>
                             </div>

@@ -22,6 +22,7 @@ get_header('careers'); ?>
     <main>
       <!--start: Banner-->
       <section class="section-bannerPatch orange-banner">
+        <div class="sector-img "></div>
         <div class="container">
           <div class="row">
             <div class="col-sm-10 col-sm-offset-1">
@@ -156,146 +157,60 @@ get_header('careers'); ?>
       </section>
 
 
-      <?php
-          $terms = get_terms("list_careers",array( 'parent' => 0 ));
-      ?>
 
-
-
-                          <?php
-
-        $paged = ( isset( $my_query_array['paged'] ) && !empty( $my_query_array['paged'] ) ) ? $my_query_array['paged'] : 1;
-
-
-                $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-
-                $terms = get_terms("list_careers",array( 'parent' => 0 ));
-                $i=1;
-                $category="";
-
-                         foreach ( $terms as $term ) {
-                         if($term->name==$_GET["cat"]){
-
-                      $category=$term->slug;
-                            }
-                           }
-
-                if(isset($_GET["cat"])){
-                $the_query=new WP_Query(array('post_type'=>'careers','posts_per_page'=>'5','paged' => $paged,'tax_query' => array(array ('taxonomy' => 'list_careers','field' => 'slug','terms' => "$category"))));
-                   }
-
-                else if(isset($_GET["tag"])){
-              $the_query=new WP_Query(array('post_type'=>'careers','posts_per_page'=>'6','paged' => $paged,'tag' => $_GET["tag"]));
-                   }
-                else{
-              $the_query=new WP_Query(array('post_type'=>'careers','posts_per_page'=>'6','paged' => $paged));
-                 }
-                $j=0;
-                while($the_query->have_posts() ) : $the_query->the_post(); $do_not_duplicate =$menu_ID;
-
-                {
-              $blog_date = get_the_date( 'd M Y', get_the_ID() );
-              $trimtitle = get_the_content();
-
-              $shorttitle = wp_trim_words( $trimtitle, $num_words = 14, $more = '… ' );
-                $exist="";
-              $menu_id = get_the_id();
-
-
-         if(isset($_GET["tag"])){
-
-
-         $tag = wp_get_post_tags($menu_id ,"tag");
-
-           foreach ( $tag as $tag ) {
-
-         if($tag->name==$_GET["tag"]){
-
-         $exist="exist";
-
-          }
-
-             }
-           }
-
-
-           else{
-        $exist="exist";
-        }
-
-
-               ?>
-
-               <?php
-
-          if($prev_title!=get_the_ID())
-          {
-                ?>
-
-                 <!--Start: Post 1-->
-
-
-
-        <?php }if($j==0 && $paged==1){
-    $j++; continue; }  $j++;?>
-        <?php  } endwhile; ?>
-
-      <!--start: Current openings-->
+  <?php $terms = get_terms( array('list_careers') ); ?>
       <section class="section current-opening-section">
+        <div class="sector-img "></div>
         <div class="container">
           <div class="row">
             <div class="col-sm-10 col-sm-offset-1 col-md-12 col-md-offset-0">
-              <div class="text-center">
-                <h3 class="section-title setion-title--md section-heading--white"><?php echo ot_get_option('section_title');?></h3>
-              </div>
-
-                <div class="current-openings-wrapper">
+              <div class="text-center"><h3 class="section-title setion-title--md section-heading--white"><?php echo ot_get_option('section_title');?></h3></div>
+              <div class="current-openings-wrapper">
                   <ul class="cop-menu">
                     <li class="col-lg-12 opening-header">
-                      <div class="col-sm-5">
-                        <h3>Team</h3>
-                      </div>
-                      <div class="col-sm-5">
-                        <h3>Role</h3>
-                      </div>
-                      <div class="col-sm-2">
-                        <h3>No.Openings</h3>
-                      </div>
+                      <div class="col-sm-5"><h3>Team</h3></div>
+                      <div class="col-sm-5"><h3>Role</h3></div>
+                      <div class="col-sm-2"><h3>No.Openings</h3></div>
                     </li>
                     <?php
-                    $terms = get_terms("list_careers",array( 'parent' => 0 ));
-                    $k=1;
-                    foreach ( $terms as $term ) {
-                      $termname = strtolower($term->name);
-                      $termname = str_replace(' ', '-', $termname);
-
-                      $blog_status="";
-                      if($term->name==$_GET['cat'])
-                      {
-                        $blog_status="active";
-                      }
-                     ?>
-                     <li class="col-lg-12">
-                      <div class="col-sm-5">
-                        <h3 class="text-capitalize title title--sm"><a href="<?php echo get_option( 'siteurl' );?>/careers?cat=<?php echo $term->name; ?>" class="category-menu__link" id="<?php echo $termname; ?>"><?php echo $term->name; ?></a></h3>
+                    foreach($terms as $term){
+                      // print_r($terms);die();
+                      $args = array(  'post_type' => 'careers',
+                                      'posts_per_page' => 20,
+                                      'post_status' => 'publish',
+                                      'tax_query' => array(
+                                      array(
+                                        'taxonomy' => 'list_careers',
+                                        'field' => 'term_id',
+                                        'terms' => $term->term_id,
+                                                                      'name' => $term->term_name,
+                                      )
+                                    ) );
+                              $industries = get_posts( $args );
+                              // print_r($industries);
+                              ?>
+                               <li class="col-lg-12">
+                                <div class="col-sm-5">
+                                  <h3 class="text-capitalize title title--sm"><?php echo $term->name; ?></h3>
+                                </div>
+                                <?php foreach($industries as $key=>$industry){ ?>
+                                <ul  class="opening-role-list col-sm-5">
+                                  <li class="opening-role">
+                                      <a href="<?php echo get_permalink();?>"><h4 class="title title--sm text-capitalize"><?php echo  get_the_title($industry); ?></h4></a>
+                                  </li>
+                                </ul>
+                                <div class="col-sm-2">
+                                  <p class="info"><?php echo get_field('no_of_postion',$industry);?> Openings</p>
+                                </div>
+                                <?php } ?>
+                            </li>
+                            <?php } ?>
+                          </ul>
+                        </div>
                       </div>
-                      <ul  class="opening-role-list col-sm-5">
-                        <li class="opening-role">
-                            <a href="<?php echo get_permalink();?>"><h4 class="title title--sm text-capitalize"><?php the_title();?></h4></a>
-
-                        </li>
-                      </ul>
-                      <div class="col-sm-2">
-                        <p class="info"><?php echo get_field('no_of_postion');?>Openings</p>
-                      </div>
-                  </li>
-                <?php $k++; } ?>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+                    </div>
+                  </div>
+                </section>
+              </main>
 
 <?php get_footer('careers'); ?>
