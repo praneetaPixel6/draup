@@ -925,6 +925,9 @@ h4.banner-title{
   .contact-banner-container {
       padding-top: 17px;
   }
+  .section-how-it-works{
+    margin-top: 0;
+  }
 }
 @media (min-width: 992px){
   .navbar--menu{

@@ -87,6 +87,7 @@ font-size: 300 12px/29px Montserrat-Light ,sans-serif;
 }
 .section-about-features{
   background-color: #f1f5f6;
+  padding-top: 70px;
 }
 .feacture-acc-header{
   margin: 80px 0 50px 0;
@@ -98,6 +99,9 @@ font-size: 300 12px/29px Montserrat-Light ,sans-serif;
   overflow: hidden;
   display: inline-block;
   vertical-align: middle;
+}
+.about-features-wrapper .section-title{
+  margin: 0;
 } 
 .about-features-wrapper h4{
   display: inline-block;
@@ -136,6 +140,7 @@ font-size: 300 12px/29px Montserrat-Light ,sans-serif;
 .section-how-it-works::before{
   background: none;
 }
+
 .section__product .section-head p{
   color: #fff;
   max-width: 550px;
@@ -144,6 +149,9 @@ font-size: 300 12px/29px Montserrat-Light ,sans-serif;
   line-height: 28px;
   font-weight: 300;
   text-align: center;
+}
+.section-how-it-works .section-title{
+  margin: 0;
 }
 .section-how-it-works .section-head p{
   line-height: 28px;
