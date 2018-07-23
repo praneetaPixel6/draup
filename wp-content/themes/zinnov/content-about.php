@@ -23,6 +23,12 @@ get_header('about'); ?>
           <div class="col-sm-10 col-sm-offset-1 mt-5">
             <div class="row">
               <div class="about-content-wrapper clearfix">
+                <div class="bar">
+                    <div class="bar__line"></div>
+                    <div class="bar__line"></div>
+                    <div class="bar__line"></div>
+                  </div>
+                  <div class="circle circle--md circle--filled circle--circleBlue "></div>
                 <div class="about-content">
                 <?php $i=1;
                     while ( have_rows('banner_list') )
@@ -130,7 +136,12 @@ get_header('about'); ?>
                     <div class="row">
                       <div class="tumbnail thumbnail-menu">
                         <div class="tumbnail__link">
-                          <div class="member-img-wrappe"><img src="<?php echo get_sub_field('member_image'); ?>" alt="Vijay Swanimathan" class="img-responsive"></div>
+                          <div class="member-img-wrappe">
+                            <div class="card-circle">
+                              <div class="circle circle--md circle--filled circle--circleOrange">   </div>
+                              <div class="circle circle--sm circle--filled circle--circleBlue">   </div>
+                            </div>
+                            <img src="<?php echo get_sub_field('member_image'); ?>" alt="Vijay Swanimathan" class="img-responsive"></div>
                           <div class="caption caption--member">
                             <h3 class="member-name member-name--white member-name--sm"><?php echo get_sub_field('member_name'); ?></h3>
                             <h5 class="member-position member-position--sm"><?php echo get_sub_field('member_designation'); ?></h5>
@@ -144,7 +155,15 @@ get_header('about'); ?>
                     <div class="row">
                       <div class="tumbnail thumbnail-menu">
                         <div class="tumbnail__link">
-                          <div class="member-img-wrappe"><img src="<?php echo get_sub_field('member_image'); ?>" alt="Vamsee Tirukkala" class="img-responsive"></div>
+                          <div class="member-img-wrappe">
+                            <div class="bar">
+                                <div class="bar__line"></div>
+                                <div class="bar__line"></div>
+                                <div class="bar__line"></div>
+                              </div>
+                              <div class="circle circle--lg circle--ring circle--ringOrange"></div>
+                              <div class="circle circle--md circle--filled circle--circleBlue "></div>
+                            <img src="<?php echo get_sub_field('member_image'); ?>" alt="Vamsee Tirukkala" class="img-responsive"></div>
                           <div class="caption caption--member">
                             <h3 class="member-name member-name--white member-name--sm"><?php echo get_sub_field('member_name'); ?></h3>
                             <h5 class="member-position member-position--sm"><?php echo get_sub_field('member_designation'); ?></h5>
@@ -165,7 +184,8 @@ get_header('about'); ?>
                     <div class="row">
                       <div class="tumbnail thumbnail-menu">
                         <div class="tumbnail__link">
-                          <div class="member-img-wrappe"><img src="<?php echo get_sub_field('member_image'); ?>" alt="Hardik Tiwari" class="img-responsive"></div>
+                          <div class="member-img-wrappe">
+                    <img src="<?php echo get_sub_field('member_image'); ?>" alt="Hardik Tiwari" class="img-responsive"></div>
                           <div class="caption caption--member">
                             <h3 class="member-name member-name--white member-name--sm"><?php echo get_sub_field('member_name'); ?></h3>
                             <h5 class="member-position member-position--sm"><?php echo get_sub_field('member_designation'); ?></h5>
@@ -238,7 +258,7 @@ get_header('about'); ?>
               </div>
               <?php  $testimonials = get_field('testimonial');?>
 
-              
+
               <div class="col-sm-8">
                 <ul class="testimonial-list testimonial-content-slider">
                 <?php  foreach($testimonials as $testimonial){

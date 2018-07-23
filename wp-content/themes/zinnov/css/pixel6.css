@@ -20,6 +20,9 @@ body{
 input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], textarea{
   padding: 12px;
 }
+.section{
+  padding: 37.5px 0;
+}
 .blue-bg{
   background: url('../images/blue-bg.png') 0 0 no-repeat;
   width: 460px;
@@ -40,7 +43,9 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
   background: #f1f5f6 url('../images/bg-blue-pattern-simple.png') 0 0 no-repeat;
   background-size: 100% auto
 }
-
+ .member-position--sm{
+    font-size: 12px;
+  }
 /* Header section */
 .navbar--menu{
   background-color: transparent;
@@ -281,10 +286,16 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
   font-size: 12px;
   text-transform: uppercase;
   color: #fff;
+  font-family: Montserrat-Regular,sans-serif;
+}
+.select-dropdown-menu .select2-container .select2-selection--single .select2-selection__rendered, .select-dropdown-menu .select2-selection--single .select2-selection__arrow{
+  color: #999;
 }
 .btn-request{
   margin-left: 18px;
   display: inline-block;
+  line-height: 22px;
+  font-family: Montserrat-Bold, sans-serif;
 }
 .paper-filter{
   text-align: right;
@@ -302,6 +313,14 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
 }
 .whitepapers-single-cont{
   margin-top: 20px;
+}
+.whitepapers-single-cont .more-read-menu__link{
+  line-height: 25px;
+  font-family: "Montserrat-Light",sans-serif;
+  font-weight: 300;
+}
+.whitepapers-single-cont .more-read-menu__link:hover{
+  color: #333;
 }
 .single-whitepapers .blog-details-wrapper{
   margin-top: 16px;
@@ -323,9 +342,6 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
   display: none;
 }
 /* Request a demo CSS */
-.section--requestDemo{
-  background: 0 none;
-}
 .section--requestDemo:before{
   display: none;
 }
@@ -338,6 +354,7 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
 }
 .page-template-content-request-demo .section{
   padding: 45px 0;
+  background-color: #f1f5f7;
 }
 .page-template-content-request-demo .section--requestDemo{
   padding-top: 70px;
@@ -378,6 +395,7 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
   background: url('../img/draup-banner.jpg') center center no-repeat;
   background-size: cover;
   padding-top: 0;
+  height: 100vh;
 }
 .section--homeBanner .row{
 	margin: 0;
@@ -469,6 +487,7 @@ h4.banner-title{
   font-size: 36px;
   font-weight: bold;
   text-transform: capitalize;
+  margin-top: 0;
 }
 .section-content{
   margin-top: 60px
@@ -489,7 +508,7 @@ h4.banner-title{
   font-size: 16px;
   font-weight: bold;
 }
-.section-solution .card-body{
+.section-solution .info{
   font-size: 16px;
   line-height: 33px;
   font-weight: 300;
@@ -551,7 +570,7 @@ h4.banner-title{
   background-size: 100% auto;
 }
 .section__product__blog{
-  padding: 200px 0 0 0;
+  padding: 200px 0 35px 0;
 }
 .section__product__blog .section-heading{
   margin: 80px 0 20px 0
@@ -627,6 +646,9 @@ h4.banner-title{
   display: none;
 }
 /* About Page */
+.title-blue--right::before{
+  left: auto;
+}
 .about-banner{
   background: url('../images/about-banner.png') 0 0 no-repeat;
   background-size: cover;
@@ -644,18 +666,62 @@ h4.banner-title{
 }
 .section-teamMembers .tumbnail__link{
   background-color: #fff;
-  width: 255px;
+  width: 305px;
+  box-shadow: 0 3px 21px 6px rgba(35, 31, 32, .08);
+}
+.about-content-wrapper{
+  position: relative;
+}
+.about-content-wrapper .bar{
+  position: absolute;
+  left: -5px;
+  top: 22%;
+}
+.about-content-wrapper .circle--circleBlue{
+  position: absolute;
+  left: -20px;
+  top: 33%;
 }
 .team-mem__list{
   overflow: visible;
+}
+.caption--member {
+  bottom: 12px;
+  left: -24px;
 }
 .member-img-wrappe{
   margin: 20px 20px 20px 0;
   position: relative;
   left: -42px;
+  height: 322px;
+  width: 322px;
+}
+.member-img-wrappe .bar{
+  position: absolute;
+  left: -3px;
+  top: 10px;
+}
+.member-img-wrappe .circle, .member-img-wrappe  .card-circle{
+  position: absolute;
+}
+.member-img-wrappe .circle--ringOrange{
+  top: 20px;
+  right: -35px;
+}
+.member-img-wrappe .circle--circleBlue{
+  top: 40%;
+  right: -45px;
+}
+.member-img-wrappe  .card-circle{
+  bottom: 0;
+  right: -18px;
+}
+.member-img-wrappe  .card-circle .circle--circleBlue{
+  top: -25px;
+  right: -30px;
 }
 .section-adv {
-  padding: 190px 0 0 0;
+  padding: 150px 0 0 0;
 }
 .testimonials-content{
   margin-top: 52px;
@@ -822,6 +888,21 @@ h4.banner-title{
   background-size: cover;
   position: relative;
 }
+.current-opening-section .bar{
+  position: absolute;
+  right: auto;
+  left: 0;
+}
+.current-opening-section .circle--ringOrange{
+  position: absolute;
+  left: -37px;
+  top: 130px;
+}
+.current-opening-section .circle--circleBlue{
+  position: absolute;
+  left: -7px;
+  top: 190px;
+}
 .section-bannerPatch .sector-img{
   top:85px;
 }
@@ -840,15 +921,13 @@ h4.banner-title{
   font-weight: 600;
   color: #474c53;
   margin-bottom: 18px;
+  font-family: Montserrat-SemiBold, sans-serif
 }
 .whyjoin-left{
   margin-top: 100px;
 }
 .career-whydraup .draup-indicator-slider::after, .career-whydraup .draup-indicator-slider{
   background: 0 none;
-}
-.draup-life{
-  padding-bottom: 70px;
 }
 .draup-life-left{
   background-color: #fff;
@@ -893,8 +972,7 @@ h4.banner-title{
   padding-right: 70px;
 }
 .draup-life-block h5{
-  font-size: 15px;
-  font-weight: 700;
+  font: 700 15px Montserrat-SemiBold, sans-serif;
 }
 .draup-life-block p{
   margin-top: 13px;
@@ -936,6 +1014,9 @@ h4.banner-title{
   .features-block-wrapper {
       padding-top: 0;
   }
+  .draup-life{
+    padding: 75px 0;
+  }
 }
 @media(min-width: 768px){
   .navbar--gray .navbar-right>li>a{
@@ -959,6 +1040,15 @@ h4.banner-title{
   }
   .product-card-list{
     margin-top: 40px;
+  }
+  .member-name{
+    font-size: 18px;
+  }
+  .caption--member{
+      padding: 20px 10px;
+  }
+  .section-teamMembers{
+    margin-top: 0;
   }
 }
 @media (max-width: 990px) {

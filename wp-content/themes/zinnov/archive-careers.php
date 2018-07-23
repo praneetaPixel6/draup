@@ -166,14 +166,21 @@ get_header('careers'); ?>
             <div class="col-sm-10 col-sm-offset-1 col-md-12 col-md-offset-0">
               <div class="text-center"><h3 class="section-title setion-title--md section-heading--white"><?php echo ot_get_option('section_title');?></h3></div>
               <div class="current-openings-wrapper">
-                  <ul class="cop-menu">
+                  <div class="bar">
+                    <div class="bar__line"></div>
+                    <div class="bar__line"></div>
+                    <div class="bar__line"></div>
+                  </div>
+                  <div class="circle circle--lg circle--ring circle--ringOrange"></div>
+                  <div class="circle circle--md circle--filled circle--circleBlue"></div>
+                  <ul class="opening-menu clearfix" id="openingAccordian">
                     <li class="col-lg-12 opening-header">
-                      <div class="col-sm-5"><h3>Team</h3></div>
+                      <div class="col-sm-4"><h3>Team</h3></div>
                       <div class="col-sm-5"><h3>Role</h3></div>
-                      <div class="col-sm-2"><h3>No.Openings</h3></div>
+                      <div class="col-sm-3"><h3>No.Openings</h3></div>
                     </li>
                     <?php
-                    foreach($terms as $term){
+                    foreach($terms as $key1=>$term){
                       // print_r($terms);die();
                       $args = array(  'post_type' => 'careers',
                                       'posts_per_page' => 20,
@@ -183,34 +190,42 @@ get_header('careers'); ?>
                                         'taxonomy' => 'list_careers',
                                         'field' => 'term_id',
                                         'terms' => $term->term_id,
-                                                                      'name' => $term->term_name,
+                                        'name' => $term->term_name,
                                       )
                                     ) );
                               $industries = get_posts( $args );
-                              // print_r($industries);
                               ?>
-                               <li class="col-lg-12">
-                                <div class="col-sm-5">
-                                  <h3 class="text-capitalize title title--sm"><?php echo $term->name; ?></h3>
-                                </div>
-                                <?php foreach($industries as $key=>$industry){ ?>
-                                <ul  class="opening-role-list col-sm-5">
-                                  <li class="opening-role">
-                                      <a href="<?php echo get_permalink();?>"><h4 class="title title--sm text-capitalize"><?php echo  get_the_title($industry); ?></h4></a>
-                                  </li>
-                                </ul>
-                                <div class="col-sm-2">
-                                  <p class="info"><?php echo get_field('no_of_postion',$industry);?> Openings</p>
-                                </div>
-                                <?php } ?>
-                            </li>
-                            <?php } ?>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-              </main>
+                              <?php if($key2 == 0) $class = "in";
+                                    else $class = "";
+                              ?>
+                                <li class="opening-content col-lg-12">
+                                    <div class="opening-acc-head col-lg-12 row ">
+                                      <a data-toggle="collapse" href="#<?php echo "collapseExample".$key1; ?>">
+                                        <h3 class="text-capitalize  col-md-9 col-sm-9"><?php echo $term->name; ?></h3>
+                                        <p class="total-opning col-md-3 col-sm-3 hidden-xs">5 Opening</p>
+                                      </a>
+                                    </div>
+                                  <div class="collapse opening-collapse" id="<?php echo "collapseExample".$key1; ?>" data-parent="openingAccordian">
+                                    <div class="col-lg-12">
+                                      <ul class="opening-role-list clearfix" >
+                                        <?php foreach($industries as $key=>$industry){ ?>
+                                            <li class="opening-role col-lg-8 col-lg-offset-4 row">
+                                                <a href="<?php echo get_permalink();?>" class="col-sm-8"><h4 class="text-capitalize"><?php echo  get_the_title($industry); ?></h4></a>
+                                                <div class="opening-number col-sm-3">
+                                                  <p><?php echo get_field('no_of_postion',$industry);?> Openings</p>
+                                                </div>
+                                            </li>
+                                        <?php } ?>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </li>
+                      <?php } ?>
+                    </ul>
 
-<?php get_footer('careers'); ?>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+<?php get_footer(); ?>

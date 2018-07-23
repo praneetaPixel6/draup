@@ -23,8 +23,8 @@ get_header(); ?>
                 <h1 class="heading"><?php echo get_field('banner_heading');?></h1>
                 <p class="info info--white text-capitalize"><?php echo get_field('banner_subtext');?></p>
               </div>
-              <div class="about-draup-wrapper ">                
-                <?php echo get_field('banner_description');?>              
+              <div class="about-draup-wrapper ">
+                <?php echo get_field('banner_description');?>
               </div>
             </div>
           </div>
@@ -44,24 +44,27 @@ get_header(); ?>
               ?>
                 <div class="accordian-wrapper">
                     <div class="feacture-acc-header col-sm-12">
-                        <?php foreach($feature_lists as $feature_list){?>  
+                        <?php foreach($feature_lists as $feature_list){?>
                           <div class="col-sm-4">
-                              <div class="feacture-img-wrap d-inline"><img src="<?php echo $feature_list['feature_image']; ?>" alt="<?php echo $feature_list['feature_title']; ?>"></div> 
+                              <div class="feacture-img-wrap d-inline"><img src="<?php echo $feature_list['feature_image']; ?>" alt="<?php echo $feature_list['feature_title']; ?>"></div>
                               <h4 class="d-inline"><?php echo $feature_list['feature_title']; ?></h4>
                           </div>
                         <?php } ?>
                     </div>
                 <div class="feacture-acc-content col-sm-12">
                     <!-- Loop -->
-                  
+
                       <?php foreach($feature_lists as $key1=>$feature_list){?>
                       <div class="col-sm-4">
                         <div id="<?php echo "accordion".$key1 ?>">
-                      <?php $feature_points = []; 
-                      $feature_points = $feature_list['feature_points']; 
-                      
+                      <?php $feature_points = [];
+                      $feature_points = $feature_list['feature_points'];
+
                       ?>
                       <?php foreach($feature_points as $key2=>$feature_point){ ?>
+                      <?php if($key2 == 0) $class = "in";
+                            else $class = "";
+                      ?>
                         <div class="card">
                             <div class="card-header" id="<?php echo "heading".$key1.$key2 ?>">
                                 <h5 class="mb-0">
@@ -70,7 +73,7 @@ get_header(); ?>
                                 </button>
                                 </h5>
                             </div>
-                            <div id="<?php echo "collapse".$key1.$key2 ?>" class="collapse" aria-labelledby="<?php echo "heading".$key1.$key2 ?>" data-parent="#<?php echo "accordion".$key1 ?>">
+                            <div id="<?php echo "collapse".$key1.$key2 ?>" class="collapse <?php echo $class; ?>" aria-labelledby="<?php echo "heading".$key1.$key2 ?>" data-parent="#<?php echo "accordion".$key1 ?>">
                                 <div class="card-body">
                                     <?php echo $feature_point['point_description']; ?>
                                 </div>
@@ -78,7 +81,7 @@ get_header(); ?>
                         </div>
                         <?php }  ?>
                       </div> </div>
-                    <?php } ?> 
+                    <?php } ?>
                 </div>
               </div>
             </div>
@@ -86,16 +89,17 @@ get_header(); ?>
         </div>
       </section>
 
-      
+
 
       <section class="section section__product__blog section__product orange-banner">
+        <div class="sector-img-left"></div>
         <div class="container">
           <div class="row">
             <div class="section-head">
               <h3 class="section-title section-heading--white text-center"><?php the_field('product_title'); ?></h3>
               <p class="info info--white text-center"><?php the_field('product_description'); ?></p>
             </div>
-            
+
             <?php  $posts = get_field('product_list');?>
             <div class="col-lg-10 col-lg-offset-1">
               <ul class="product-card-list clearfix">

@@ -80,17 +80,17 @@ get_header('requestdemo'); ?>
                               <input id="company" type="text" name="company" required placeholder="Company" class="form-control input-text-field input-field">
                             </div>
                           </div>
-                          <div class="col-sm-6">           
+                          <div class="col-sm-6">
                             <div class="form-group">
                               <label for="designation" class="input-label">designation</label>
                               <input id="designation" type="text" name="designation" required placeholder="Designation" class="form-control input-text-field input-field">
                             </div>
                           </div>
-                         <!--  <div class="col-sm-12">          
+                         <!--  <div class="col-sm-12">
                             <div class="form-group">
                               <label for="region" class="input-label">region</label>
                               <select class="select-time select-time--date" id="region" name="region">
-                                
+
                                 <option>India</option>
                                 <option>India</option>
                                 <option>USA</option>
@@ -103,13 +103,13 @@ get_header('requestdemo'); ?>
                               <div class="form-group">
                                 <label for="date" class="input-label col-sm-12 label-timezone">Time Zone</label>
                                 <div class="clearfix timezone-fields">
-                                  <div class="col-sm-5">           
+                                  <div class="col-sm-5">
                                     <div class="form-group">
                                       <label for="date" class="input-label">date</label>
                                       <input id="date" name="date" type="text"  placeholder="Date" data-format="dd/MM/yyyy" class="date form-control input-field" required>
                                     </div>
                                   </div>
-                                  <div class="col-sm-5">           
+                                  <div class="col-sm-5">
                                     <div class="form-group">
                                       <label for="time" class="input-label">time</label>
                                       <select class="select-time" id="time" name="time">
@@ -130,7 +130,7 @@ get_header('requestdemo'); ?>
                                         <option>07:30AM - 08:00AM PST</option>
                                         <option>08:30AM - 09:00AM PST</option>
                                         <option>09:00AM - 09:30AM PST</option>
-                                       
+
                                       </select>
                                     </div>
                                   </div>
@@ -146,13 +146,13 @@ get_header('requestdemo'); ?>
                               <div class="form-group">
                                 <label for="date" class="input-label col-sm-12 label-timezone">Time Zone</label>
                                 <div class="clearfix timezone-fields">
-                                  <div class="col-sm-5">           
+                                  <div class="col-sm-5">
                                     <div class="form-group">
                                       <label for="date" class="input-label">date</label>
                                       <input id="date" name="date" type="text"  placeholder="Date" data-format="dd/MM/yyyy" class="date form-control input-field" required>
                                     </div>
                                   </div>
-                                  <div class="col-sm-5">           
+                                  <div class="col-sm-5">
                                     <div class="form-group">
                                       <label for="time" class="input-label">time</label>
                                       <select class="select-time" id="time" name="time">
@@ -173,7 +173,7 @@ get_header('requestdemo'); ?>
                                         <option>07:30AM - 08:00AM PST</option>
                                         <option>08:30AM - 09:00AM PST</option>
                                         <option>09:00AM - 09:30AM PST</option>
-                                       
+
                                       </select>
                                     </div>
                                   </div>
@@ -184,7 +184,7 @@ get_header('requestdemo'); ?>
                               </div>
                             </div>
                           </div>
-                          
+
                           <div class="col-sm-12 message">
                             <div class="form-group">
                               <label for="message" class="input-label">message</label>
@@ -221,7 +221,7 @@ get_header('requestdemo'); ?>
           <div class="row">
             <div class="features-block-wrapper">
               <div class="text-center">
-                <h3 class="section-heading"><?php echo get_field('feature_heading');?></h3>
+                <h3 class="section-title"><?php echo get_field('feature_heading');?></h3>
               </div>
               <ul class="features-menu clearfix">
                 <li class="col-sm-3">
@@ -264,7 +264,7 @@ get_header('requestdemo'); ?>
       <section class="section section-FAQBanner">
         <div class="container">
          <div class="text-center">
-          <h3 class="section-heading">FAQ</h3>
+          <h3 class="section-title">FAQ</h3>
         </div>
         <div class="row faq-wrapper">
           <div class="col-sm-9">
@@ -277,7 +277,7 @@ get_header('requestdemo'); ?>
                     <?php
             $terms = get_terms("list_faq",array( 'parent' => 0 ));
             $i=1;
-            foreach ( $terms as $term ) { 
+            foreach ( $terms as $term ) {
             $termname = strtolower($term->name);
             $termname = str_replace(' ', '-', $termname);
           ?>
@@ -285,7 +285,7 @@ get_header('requestdemo'); ?>
                <?php if($i==2) echo '<div class="circle-wrapper">
                     <div class="circle circle--sm circle--circleBlue"></div>
                     <div class="circle circle--md circle--circleOrange"></div>
-                  </div>';?> 
+                  </div>';?>
                   <div class="col-sm-3">
                     <div class="row">
                       <h3 class="faq-title" data-category="<?php echo $termname; ?>"><?php echo $term->name; ?></h3>
@@ -294,11 +294,11 @@ get_header('requestdemo'); ?>
                   <div class="col-sm-9">
                     <div class="row">
                       <ol class="faq-qa-list">
-                        <?php 
+                        <?php
           $the_query=new WP_Query(array('post_type'=>'faq','orderby' => 'meta_value','order' => 'ASC','tax_query' => array(array ('taxonomy' => 'list_faq','field' => 'slug','terms' => $term->slug ))));
-            while($the_query->have_posts() ) : $the_query->the_post(); 
+            while($the_query->have_posts() ) : $the_query->the_post();
             { ?>
-                                     
+
                         <li class="faq-qa-list__item"><a href="#<?php echo $i;?>" id="<?php echo $termname; ?>" class="faq-qa-list__link"><?php the_title();?></a></li>
                    <?php  }  endwhile;?>
                       </ol>
@@ -313,11 +313,11 @@ get_header('requestdemo'); ?>
                 <?php
           $terms = get_terms("list_faq",array( 'parent' => 0 ));
           $i=1;
-          foreach ( $terms as $term ) { 
+          foreach ( $terms as $term ) {
           $termname = strtolower($term->name);
           $termname = str_replace(' ', '-', $termname);
         ?>
-              
+
                 <li id="<?php echo $i; ?>" class="faq-qa-menu__list">
                   <div class="col-sm-3">
                     <div class="row">
@@ -327,11 +327,11 @@ get_header('requestdemo'); ?>
                   <div class="col-sm-9">
                     <div class="row">
                       <ol class="faq-qa-list">
-                       <?php 
+                       <?php
           $the_query=new WP_Query(array('post_type'=>'faq','orderby' => 'meta_value','order' => 'ASC','tax_query' => array(array ('taxonomy' => 'list_faq','field' => 'slug','terms' => $term->slug ))));
-            while($the_query->have_posts() ) : $the_query->the_post(); 
-            {        
-          ?>  
+            while($the_query->have_posts() ) : $the_query->the_post();
+            {
+          ?>
                         <li class="faq-qa-list__item">
                           <h4 class="qa-menu__heading"><?php the_title();?></h4>
                           <p class="info"><?php the_content();?></p>
@@ -345,7 +345,7 @@ get_header('requestdemo'); ?>
               </ul>
             </div>
           </div>
-     
+
           <div class="col-sm-3">
 
             <div class="card-wrapper">
@@ -368,13 +368,13 @@ get_header('requestdemo'); ?>
              <!-- <div class="card-wrapper">
                <h3 class="section-title">Our Blog</h3>
               <ul class="articles-menu">
-              <?php 
+              <?php
       $the_query=new WP_Query(array('post_type'=>'blog','posts_per_page'   => '3'));
-        while($the_query->have_posts() ) : $the_query->the_post(); 
-        {  
+        while($the_query->have_posts() ) : $the_query->the_post();
+        {
       ?>
                 <li class="articles-menu__list"><a href="<?php echo get_permalink();?>" class="articles-menu__link"><?php the_title();?></a></li>
-               
+
                   <?php
         }  endwhile;?>
               </ul>
@@ -387,4 +387,3 @@ get_header('requestdemo'); ?>
     </main>
     <?php get_footer(); ?>
   <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/request-demo-header-animation.js"></script>
-    

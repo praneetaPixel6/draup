@@ -48,7 +48,7 @@ window.location="<?php echo get_option( 'siteurl' );?>/whitepapers?sort="+val;
                      <option value="All">All</option>
 		         	<?php } else {?>
 
-		            <option>Filter By</option>
+		            <option>Sort</option>
 		            <option value="All">All</option>
 		            <?php }?>
                     <?php
@@ -186,10 +186,10 @@ window.location="<?php echo get_option( 'siteurl' );?>/whitepapers?sort="+val;
 		<div class='display-flex'>
 			<div class="col-sm-7">
 				<div class="row flex-height">
-				<a  href="<?php echo get_permalink(); ?>">
-					<div class="paper-img">
-						<?php echo get_the_post_thumbnail( get_the_ID(), 'whitepapers-thumbnail',array('alt' => 'whitepapers image','class' => 'img-responsive')); ?>
-					</div>
+					<a href="<?php echo get_permalink(); ?>">
+						<div class="paper-img">
+							<?php echo get_the_post_thumbnail( get_the_ID(), 'whitepapers-thumbnail',array('alt' => 'whitepapers image','class' => 'img-responsive')); ?>
+						</div>
 					</a>
 				</div>
 			</div>

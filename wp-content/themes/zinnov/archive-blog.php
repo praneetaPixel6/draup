@@ -277,7 +277,7 @@ get_header('blog'); ?>
                     </div>
                   </div>
                 </div>
-               <div class="text-center logo-footer"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/footer-logo.svg" alt="Draup" class="logo-footer__img"></div>
+              
               </div>
             </div>
           </div>

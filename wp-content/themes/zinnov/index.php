@@ -86,7 +86,7 @@ get_header();?>
                     </div>
                   </div>
                   <!--start: Image Slider Content-->
-                  <div class="col-md-7 text-right">
+                  <div class="col-md-7 text-right hidden-xs">
                     <div class="img-slider-wrapper">
                       <ul class="img-slider-menu clearfix">
                         <li class="img-slider-menu__list">
@@ -127,7 +127,7 @@ get_header();?>
                           <img class="card-img-top" src="<?php echo get_field('solutions_image1');?>" alt="<?php echo get_field('solutions_title1');?>">
                           <div class="card-body">
                             <h4 class="card-title"><?php echo get_field('solutions_title1');?></h4>
-                            <p class="card-text"><?php echo get_field('solutions_description1');?></p>
+                            <p class="card-text info"><?php echo get_field('solutions_description1');?></p>
                             <a href="<?php echo get_field('button_link1');?>" class="link"><?php echo get_field('button_text1');?></a>
                           </div>
                         </div>
@@ -144,7 +144,7 @@ get_header();?>
                               <div class="bar__line"></div>
                             </div>
                            <h4 class="card-title"><?php echo get_field('solutions_title2');?></h4>
-                           <p class="card-text"><?php echo get_field('solutions_description2');?></p>
+                           <p class="card-text info"><?php echo get_field('solutions_description2');?></p>
                            <a href="<?php echo get_field('button_link2');?>" class="link"><?php echo get_field('button_text2');?></a>
                           </div>
                         </div>
@@ -166,7 +166,7 @@ get_header();?>
         <div class="container">
           <div class="row">
             <div class="text-center">
-              <h4 class="section-heading"><?php echo $section_heading;?></h4>
+              <h4 class="section-title"><?php echo $section_heading;?></h4>
             </div>
             <div class="col-sm-10 col-sm-offset-1 flex-slider">
               <div class="col-sm-6 hidden-xs">
@@ -210,25 +210,25 @@ get_header();?>
                     <li class="draup-content-slider__list">
                       <div class="content-wrapper">
                         <h3 class="slider-content-heading"><?php echo $slider_content_heading1;?></h3>
-                        <p class="info"><?php echo $slider_content1;?></p><a href="<?php echo $slider1_link;?>" class="link">learn more</a>
+                        <p class="info"><?php echo $slider_content1;?></p>
                       </div>
                     </li>
                     <li class="draup-content-slider__list">
                       <div class="content-wrapper">
                         <h3 class="slider-content-heading"><?php echo $slider_content_heading2;?></h3>
-                        <p class="info"><?php echo $slider_content2;?></p><a href="<?php echo  $slider2_link;?>" class="link">learn more</a>
+                        <p class="info"><?php echo $slider_content2;?></p>
                       </div>
                     </li>
                     <li class="draup-content-slider__list">
                       <div class="content-wrapper">
                         <h3 class="slider-content-heading"><?php echo $slider_content_heading3;?></h3>
-                        <p class="info"><?php echo $slider_content3;?></p><a href="<?php echo $slider3_link;?>" class="link">learn more</a>
+                        <p class="info"><?php echo $slider_content3;?></p>
                       </div>
                     </li>
                     <li class="draup-content-slider__list">
                       <div class="content-wrapper">
                         <h3 class="slider-content-heading"><?php echo $slider_content_heading4;?></h3>
-                        <p class="info"><?php echo $slider_content4;?></p><a href="<?php echo $slider4_link;?>" class="link">learn more</a>
+                        <p class="info"><?php echo $slider_content4;?></p>
                       </div>
                     </li>
                   </ul>
@@ -242,7 +242,7 @@ get_header();?>
       <section class="section section__product__blog cross-orange-banner">
         <div class="container">
           <div class="row">
-            <h3 class="section-heading section-heading--white text-center"><?php the_field('post_title'); ?></h3>
+            <h3 class="section-title section-heading--white text-center"><?php the_field('post_title'); ?></h3>
             <p class="info info--white text-center"><?php the_field('post_description'); ?></p>
             <?php  $posts = get_field('post_list');?>
             <div class="col-lg-10 col-lg-offset-1">
@@ -272,7 +272,7 @@ get_header();?>
                       <div class="card-body">
                         <a href="<?php echo get_permalink($post); ?>" class="author">By <strong><?php echo $author_name; ?></strong> <?php echo get_the_date('d M Y');?></a>
                         <h5 class="card-title"><?php echo get_the_title($post); ?></h5>
-                        <p class="card-text"><?php echo $shorttitle; ?></p>
+                        <p class="card-text info"><?php echo $shorttitle; ?></p>
                         <a href="<?php echo get_permalink($post); ?>" class="link">Read More</a>
                     </div>
                   </li>
