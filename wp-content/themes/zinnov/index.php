@@ -61,7 +61,7 @@ get_header();?>
 	 <!--START: Main-->
     <main>
       <!--Start: Banner-->
-        <section class="section-homeBanner1  section-bannerpatch1 section--homeBanner">
+        <section class=" section section-homeBanner1  section-bannerpatch1 section--homeBanner">
           <div class="container-fluid">
             <div class="row">
               <div class="col-lg-10 col-lg-offset-2">

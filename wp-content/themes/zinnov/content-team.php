@@ -19,7 +19,7 @@ get_header('about'); ?>
  <!--START: Main-->
     <main>
       <!--start: Banner-->
-      <section class="section-teamPage1">
+      <section class="section section-teamPage1 blue-bg-pattern">
         <div class="container">
           <div class="row">
             <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
@@ -28,8 +28,8 @@ get_header('about'); ?>
                   <h3 class="content-title content-title--blue"><?php echo get_field('banner_title'); ?></h3>
                   <div class="team-page-info">
                   <?php $i=1;
-                    while ( have_rows('banner_list') ) 
-                       {   
+                    while ( have_rows('banner_list') )
+                       {
                            the_row();
                             ?>
                     <p class="info"><?php echo get_sub_field('banner_points'); ?></p>
@@ -42,16 +42,16 @@ get_header('about'); ?>
         </div>
       </section>
       <!--start: Team Member-->
-      <section class="section">
-        <div class="container"> 
+      <section class="section team-detail-section">
+        <div class="container">
           <div class="row">
             <div class="col-sm-12">
               <div class="team-members-wrapper team-members-wrapper--noMargin">
                 <ul class="team-mem clearfix">
                   <!--START: Team Row 1-->
                   <?php $i=1;
-                    while ( have_rows('team_list') ) 
-                       {   
+                    while ( have_rows('team_list') )
+                       {
                            the_row();
                             if($i==1) {?>
                   <li class="team-mem__list col-sm-4 col-md-4 col-lg-3 col-sm-offset-3">
@@ -83,10 +83,10 @@ get_header('about'); ?>
                   </li>
                   <?php } $i++;} ?>
                 </ul>
-                <ul class="team-mem clearfix">   
+                <ul class="team-mem clearfix">
                 <?php $i=1;
-                    while ( have_rows('team_list') ) 
-                       {   
+                    while ( have_rows('team_list') )
+                       {
                            the_row();
                             if($i>2 && $i<=6) {?>
                   <li class="team-mem__list col-sm-4 col-md-4 col-lg-3">
@@ -103,13 +103,13 @@ get_header('about'); ?>
                     </div>
                   </li>
                   <?php } $i++;} ?>
-                  
-                  
+
+
                 </ul>
                 <ul class="team-mem clearfix">
                  <?php $i=1;
-                    while ( have_rows('team_list') ) 
-                       {   
+                    while ( have_rows('team_list') )
+                       {
                            the_row();
                             if($i>6){?>
                   <li class="team-mem__list col-sm-4 col-md- col-lg-2">
@@ -126,7 +126,7 @@ get_header('about'); ?>
                     </div>
                   </li>
                   <?php } $i++;} ?>
-                  
+
                 </ul>
               </div>
             </div>

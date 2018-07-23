@@ -18,7 +18,7 @@ get_header('about'); ?>
 <!--START: Main-->
     <main>
       <!--Start: Banner-->
-      <section class="section-bannerPatch about-banner">
+      <section class=" section section-bannerPatch about-banner">
         <div class="container">
           <div class="col-sm-10 col-sm-offset-1 mt-5">
             <div class="row">

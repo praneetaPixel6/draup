@@ -685,11 +685,11 @@ h4.banner-title{
 .team-mem__list{
   overflow: visible;
 }
-.caption--member {
+.section-teamMembers .caption--member {
   bottom: 12px;
   left: -24px;
 }
-.member-img-wrappe{
+.section-teamMembers .member-img-wrappe{
   margin: 20px 20px 20px 0;
   position: relative;
   left: -42px;
