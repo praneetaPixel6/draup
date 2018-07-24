@@ -134,7 +134,7 @@ get_header('careers'); ?>
                   <div class="bar__line"></div>
                   <div class="bar__line"></div>
                 </div>
-                <div class="circle circle--md circle--filled circle--circleBlue">
+                <div class="circle circle--md circle--filled circle--circleBlue hidden-xs">
 
                 </div>
               </div>
@@ -171,10 +171,10 @@ get_header('careers'); ?>
                     <div class="bar__line"></div>
                     <div class="bar__line"></div>
                   </div>
-                  <div class="circle circle--lg circle--ring circle--ringOrange"></div>
-                  <div class="circle circle--md circle--filled circle--circleBlue"></div>
+                  <div class="circle circle--lg circle--ring circle--ringOrange hidden-xs"></div>
+                  <div class="circle circle--md circle--filled circle--circleBlue hidden-xs"></div>
                   <ul class="opening-menu clearfix" id="openingAccordian">
-                    <li class="col-lg-12 opening-header">
+                    <li class="col-lg-12 opening-header hidden-xs">
                       <div class="col-sm-4"><h3>Team</h3></div>
                       <div class="col-sm-5"><h3>Role</h3></div>
                       <div class="col-sm-3"><h3>No.Openings</h3></div>
@@ -197,12 +197,17 @@ get_header('careers'); ?>
                               ?>
                               <?php if($key2 == 0) $class = "in";
                                     else $class = "";
-                              ?>
+                  					$count = 0;
+                              ?><?php foreach($industries as $key=>$industry){
+                              		$no_opening = get_field('no_of_postion',$industry);
+                              		$count = $count + $no_opening;
+                              		//echo $count;
+                              	} ?>
                                 <li class="opening-content col-lg-12">
                                     <div class="opening-acc-head col-lg-12 row ">
                                       <a data-toggle="collapse" href="#<?php echo "collapseExample".$key1; ?>">
                                         <h3 class="text-capitalize  col-md-9 col-sm-9"><?php echo $term->name; ?></h3>
-                                        <p class="total-opning col-md-3 col-sm-3 hidden-xs">5 Opening</p>
+                                        <p class="total-opning col-md-3 col-sm-3 hidden-xs"><?php echo $count; ?> Openings </p>
                                       </a>
                                     </div>
                                   <div class="collapse opening-collapse" id="<?php echo "collapseExample".$key1; ?>" data-parent="openingAccordian">
@@ -210,8 +215,8 @@ get_header('careers'); ?>
                                       <ul class="opening-role-list clearfix" >
                                         <?php foreach($industries as $key=>$industry){ ?>
                                             <li class="opening-role col-lg-8 col-lg-offset-4 row">
-                                                <a href="<?php echo get_permalink();?>" class="col-sm-8"><h4 class="text-capitalize"><?php echo  get_the_title($industry); ?></h4></a>
-                                                <div class="opening-number col-sm-3">
+                                                <a href="<?php echo get_permalink();?>" class="col-sm-8 col-xs-6"><h4 class="text-capitalize"><?php echo  get_the_title($industry); ?></h4></a>
+                                                <div class="opening-number col-sm-3 col-xs-6">
                                                   <p><?php echo get_field('no_of_postion',$industry);?> Openings</p>
                                                 </div>
                                             </li>

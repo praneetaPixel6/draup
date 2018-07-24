@@ -17,7 +17,7 @@ get_header('requestdemo'); ?>
             <!-- <div class="contact-banner-container"> -->
               <div class="col-sm-12">
                 <h3 class="heading heading--main heading--lg"><?php echo get_field('request_demo_heading');?></h3>
-                <div class="request-demo-wrapper flex clearfix">
+                <div class="request-demo-wrapper d-md-flex clearfix">
                   <div class="col-sm-6">
                     <div class="row">
                       <div class="demo-content-wrapper">

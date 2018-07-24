@@ -195,7 +195,7 @@
               <ul class="navbar-nav nav navbar-right">
                                 <!--ASTART: About Page-->
                                 <li class="nav__list position-static"><a href="javascript:void(0)" class="nav__link">
-                                     
+
                                     <?php echo ot_get_option('about');?>
                                     <div class="dropdown-rect"></div></a>
                                   <div class="dropdown-Menu">
@@ -229,7 +229,7 @@
                                             <li class="col-sm-4 drop-menu__list"><a href="<?php echo get_option('siteurl');?>/<?php echo ot_get_option('menu4_link1');?>" class="link link--blue title-blue"><?php echo ot_get_option('menu4');?></a>
                                                                             <p class="info info--light"><?php echo ot_get_option('menu4_content');?></p><a href="<?php echo get_option('siteurl');?>/<?php echo ot_get_option('menu4_link1');?>" class="link">learn more</a><a href="<?php echo get_option('siteurl');?>/<?php echo ot_get_option('menu4_link2');?>" class="link ml-2">login</a>
                                             </li>
-                                            <li class="col-sm-4 drop-menu__list no-links"><a href="<?php echo get_option('siteurl');?>/<?php echo ot_get_option('menu5_link');?>" class="link link--blue title-blue"><?php echo ot_get_option('menu5');?></a>
+                                            <li class="col-sm-4 drop-menu__list "><a href="<?php echo get_option('siteurl');?>/<?php echo ot_get_option('menu5_link');?>" class="link link--blue title-blue"><?php echo ot_get_option('menu5');?></a>
                                                                             <p class="info info--light"><?php echo ot_get_option('menu5_content');?></p><a href="javascript:void(0)" class="link link--disabled"></a>
                                             </li>
                                             <li class="col-sm-4 drop-menu__list no-links"><a href="<?php echo get_option('siteurl');?>/<?php echo ot_get_option('menu6_link');?>" class="link link--blue title-blue"><?php echo ot_get_option('menu6');?></a>

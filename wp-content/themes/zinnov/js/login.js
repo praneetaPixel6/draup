@@ -120,4 +120,10 @@ $(document).ready(function() {
       var winHeight = jQuery(window).height();
       var footerHeight = jQuery('.footer').outerHeight();
       jQuery('.login-page').css({'height': winHeight - footerHeight});
+
+
+      //NavDropdown
+      jQuery('.nav__list a').click(function(){
+        jQuery(this).siblings('.dropdown-Menu').toggle();
+      })
 });

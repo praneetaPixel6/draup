@@ -132,12 +132,12 @@ get_header('about'); ?>
                        {
                            the_row();
                             if($i==1) {?>
-                  <li class="team-mem__list col-sm-4 col-md-3 col-sm-offset-2 mt-5">
+                  <li class="team-mem__list col-sm-4 col-md-3 col-md-offset-2 mt-5">
                     <div class="row">
                       <div class="tumbnail thumbnail-menu">
                         <div class="tumbnail__link">
                           <div class="member-img-wrappe">
-                            <div class="card-circle">
+                            <div class="card-circle hidden-xs">
                               <div class="circle circle--md circle--filled circle--circleOrange">   </div>
                               <div class="circle circle--sm circle--filled circle--circleBlue">   </div>
                             </div>
@@ -161,8 +161,8 @@ get_header('about'); ?>
                                 <div class="bar__line"></div>
                                 <div class="bar__line"></div>
                               </div>
-                              <div class="circle circle--lg circle--ring circle--ringOrange"></div>
-                              <div class="circle circle--md circle--filled circle--circleBlue "></div>
+                              <div class="circle circle--lg circle--ring circle--ringOrange hidden-xs"></div>
+                              <div class="circle circle--md circle--filled circle--circleBlue hidden-xs"></div>
                             <img src="<?php echo get_sub_field('member_image'); ?>" alt="Vamsee Tirukkala" class="img-responsive"></div>
                           <div class="caption caption--member">
                             <h3 class="member-name member-name--white member-name--sm"><?php echo get_sub_field('member_name'); ?></h3>
