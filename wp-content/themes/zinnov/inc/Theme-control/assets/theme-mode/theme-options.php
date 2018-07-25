@@ -376,6 +376,27 @@ function custom_theme_options() {
         'type' => 'text',
         'section' => 'header'
     ),
+
+    array(
+        'id' => 'menu10',
+        'label' => 'Enter Name of the Menu',
+        'type' => 'text',
+        'section' => 'header'
+    ),
+    
+    array(
+        'id' => 'menu10_content',
+        'label' => 'Enter Info',
+        'type' => 'text',
+        'section' => 'header'
+    ),
+    
+    array(
+        'id' => 'menu10_link',
+        'label' => 'Enter link',
+        'type' => 'text',
+        'section' => 'header'
+    ),
     
     
     //Menu 4

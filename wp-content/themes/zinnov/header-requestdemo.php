@@ -305,6 +305,9 @@
                                             <li class="col-sm-3 drop-menu__list"><a href="<?php echo get_option('siteurl');?>/<?php echo ot_get_option('menu9_link');?>" class="link link--blue title-blue"><?php echo ot_get_option('menu9');?></a>
                                                                             <p class="info info--light"><?php echo ot_get_option('menu9_content');?></p><a href="<?php echo get_option('siteurl');?>/<?php echo ot_get_option('menu9_link');?>" class="link">read more</a>
                                             </li>
+                                             <li class="col-sm-3 drop-menu__list"><a href="<?php echo get_option('siteurl');?>/<?php echo ot_get_option('menu10_link');?>" class="link link--blue title-blue"><?php echo ot_get_option('menu10');?></a>
+                                                                            <p class="info info--light"><?php echo ot_get_option('menu10_content');?></p><a href="<?php echo get_option('siteurl');?>/<?php echo ot_get_option('menu10_link');?>" class="link">read more</a>
+                                            </li>
                                           </ul>
                                         </div>
                                       </div>
