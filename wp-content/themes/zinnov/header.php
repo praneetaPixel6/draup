@@ -41,19 +41,13 @@
                 <svg id="Layer_1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 115 44" style="enable-background:new 0 0 115 44;" xml:space="preserve" class="header-logo">
                   <style type="text/css">
                     .st0{clip-path:url(#SVGID_2_);fill:#fff;}
-                    
                     .st2{clip-path:url(#SVGID_6_);fill:#fff;}
-                    
                     .st4{clip-path:url(#SVGID_10_);fill:#fff;}
-                    
                     .st6{clip-path:url(#SVGID_14_);fill:#fff;}
-                    
                     .st8{clip-path:url(#SVGID_18_);fill:#fff;}
-                    
-                    .st10{clip-path:url(#SVGID_22_);fill:#fff;}
-                    
+                    .st10{clip-path:url(#SVGID_22_);fill:#fff;}                    
                     .st12{clip-path:url(#SVGID_26_);fill:#fff;}
-                    
+
                     @keyframes blink {
                     90% {
                     transform: none;
@@ -250,7 +244,7 @@
               <ul class="navbar-nav nav navbar-right">
                                 <!--ASTART: About Page-->
                                 <li class="nav__list position-static"><a href="javascript:void(0)" class="nav__link">
-                                     
+
                                     <?php echo ot_get_option('about');?>
                                     <div class="dropdown-rect"></div></a>
                                   <div class="dropdown-Menu">

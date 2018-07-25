@@ -11,10 +11,10 @@ get_header('productdetail'); ?>
 <?php while ( have_posts() ) : the_post();  ?>
 <?php $product_date = get_the_date('d F Y',get_the_ID());?>
 
-	 <main>
+     <main>
         <!--Start: Banner-->
         <section class="section-article1 section-resourceUpdates">
-					<div class="sector-img "></div>
+                    <div class="sector-img "></div>
             <div class="container">
                 <div class="banner-wrapper banner-wrapper--sm banner-wrapper--resourceUpdates mt-5 product-article clearfix">
                     <div class="col-sm-12 col-md-9">
@@ -31,7 +31,7 @@ get_header('productdetail'); ?>
                                 <span class="product-metadata__title"><?php echo get_field('meta_title');?></span>
                                 <span class="product-metadata__date"><?php echo $product_date;?></span>
                             </div>
-														<div class="product-content-wrap">
+                                                        <div class="product-content-wrap">
                                                             <div class="product_content clearfix">
                                                                     <?php the_content();?>
                                                                     <?php if(!empty(get_field('select_author')) ){ ?>
@@ -62,13 +62,13 @@ get_header('productdetail'); ?>
                             <ul class="articles-menu">
                             <?php
 
-      			$the_query=new WP_Query(array('post_type'=>'products','posts_per_page'   => '6'));
+                $the_query=new WP_Query(array('post_type'=>'newsletter','posts_per_page'   => '6'));
 
-      			while($the_query->have_posts() ) : $the_query->the_post();
-            		{
+                while($the_query->have_posts() ) : $the_query->the_post();
+                    {
 
 
-            	$trimtitle = get_the_content();
+                $trimtitle = get_the_content();
 
                 $shorttitle = wp_trim_words( $trimtitle, $num_words = 35, $more = '...' );
 
@@ -103,31 +103,31 @@ get_header('productdetail'); ?>
                                         <h4 class="section-title section-title--sub py-sm-2" ><?php echo get_field('second_card_title');?></h3>
                                             <p class="info lh-28"><?php echo get_field('title_description');?></p>
                                         <?php if(!get_field('disable_request_button') ){ ?>
-	                                        <div class="m-1 text-center hidden-sm hidden-md hidden-lg ">
-	                                            <a href="<?php echo get_field('request_button_text_link');?>" class="btn btn--oval btn--outline btn--xs text-capitalize"><?php echo get_field('request_button_text');?></a>
-	                                        </div>
+                                            <div class="m-1 text-center hidden-sm hidden-md hidden-lg ">
+                                                <a href="<?php echo get_field('request_button_text_link');?>" class="btn btn--oval btn--outline btn--xs text-capitalize"><?php echo get_field('request_button_text');?></a>
+                                            </div>
                                         <?php } ?>
                                         <?php if(!get_field('disable_request_button') ){ ?>
-	                                        <div class="m-1 text-left hidden-xs ">
-	                                            <a href="<?php echo get_field('request_button_text_link');?>" class="btn btn--oval btn--outline btn--sm text-capitalize"><?php echo get_field('request_button_text');?></a>
-	                                        </div>
-                                    	<?php } ?>
+                                            <div class="m-1 text-left hidden-xs ">
+                                                <a href="<?php echo get_field('request_button_text_link');?>" class="btn btn--oval btn--outline btn--sm text-capitalize"><?php echo get_field('request_button_text');?></a>
+                                            </div>
+                                        <?php } ?>
                                     </div>
                                     <div class="col-xs-12 col-md-5 p-0 text-center col-md-offset-1">
-                                    	<?php $image = get_field('about_image');
-                           				 if($image) { ?>
+                                        <?php $image = get_field('about_image');
+                                         if($image) { ?>
                                         <img src="<?php echo get_field('about_image');?>" alt="About Banner" class="img-responsive m-0-auto mb-4 ">
                                     <?php } ?>
                                         <p class="info"><?php echo get_field('about_image_text');?></p>
                                         <?php if(!get_field('disable_request_profile_button') ){ ?>
-	                                        <div class="m-1  hidden-xs">
-	                                            <a href="#" class="btn btn--oval btn--outline btn--xs text-capitalize ">request executive profile</a>
-	                                        </div>
+                                            <div class="m-1  hidden-xs">
+                                                <a href="#" class="btn btn--oval btn--outline btn--xs text-capitalize ">request executive profile</a>
+                                            </div>
                                         <?php } ?>
                                         <?php if(!get_field('disable_request_profile_button') ){ ?>
-	                                        <div class="m-1 hidden-sm hidden-md hidden-lg">
-	                                            <a href="#" class="btn btn--oval btn--outline btn--xs text-capitalize ">request executive profile </a>
-	                                        </div>
+                                            <div class="m-1 hidden-sm hidden-md hidden-lg">
+                                                <a href="#" class="btn btn--oval btn--outline btn--xs text-capitalize ">request executive profile </a>
+                                            </div>
                                         <?php } ?>
                                     </div>
                                 </div>
@@ -142,14 +142,14 @@ get_header('productdetail'); ?>
                                         <h4 class="section-title section-title--sub py-sm-2"><?php echo get_field('braindesk_title');?></h3>
                                             <?php echo get_field('braindesk_description');?>
                                             <?php if(!get_field('disable_access_button') ){ ?>
-	                                            <div class="m-1">
-	                                                <a href="<?php echo get_field('access_bank_button_text_link');?>" class="btn btn--oval btn--outline btn--sm text-capitalize"> <?php echo get_field('access_bank_button_text');?></a>
-	                                            </div>
-                                        	<?php } ?>
+                                                <div class="m-1">
+                                                    <a href="<?php echo get_field('access_bank_button_text_link');?>" class="btn btn--oval btn--outline btn--sm text-capitalize"> <?php echo get_field('access_bank_button_text');?></a>
+                                                </div>
+                                            <?php } ?>
                                     </div>
                                     <div class="col-xs-12 col-md-5 text-center m-0-auto">
-                                    	<?php $image = get_field('about_image1');
-                           				 if($image) { ?>
+                                        <?php $image = get_field('about_image1');
+                                         if($image) { ?>
                                         <img src="<?php echo get_field('about_image1');?>" alt="About Banner" class="img-responsive m-0-auto mb-4 imgFit">
                                         <?php } ?>
                                     </div>

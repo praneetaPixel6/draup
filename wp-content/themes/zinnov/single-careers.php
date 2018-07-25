@@ -21,7 +21,7 @@ get_header('careerdetails'); ?>
                 <div class="jd-wrapper">
                   <div class="jd-title-wrapper">
                     <h3 class="jd-title">
-                       
+
                      <?php the_title();?>
                     <span class="jd-category"><?php echo get_field('sub_title');?></span></h3>
                   </div>
@@ -45,7 +45,7 @@ get_header('careerdetails'); ?>
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title">Apply for Job<span>
-               
+
               required<i class="required">*</i></span></h5>
           <button type="button" data-dismiss="modal" aria-label="Close" class="close">&times;</button>
         </div>
@@ -67,7 +67,7 @@ get_header('careerdetails'); ?>
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="first-name" class="input-label">
-                         
+
                         first name<i class="required">*</i>
                       </label>
                       <input id="first-name" name="yourname" type="text" required placeholder="Enter first name" class="form-control input-field">
@@ -76,7 +76,7 @@ get_header('careerdetails'); ?>
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="last-name" class="input-label">
-                         
+
                         last name<i class="required">*</i>
                       </label>
                       <input id="last-name"  name="lastname" type="text" required placeholder="Enter last name" class="form-control input-field">
@@ -87,7 +87,7 @@ get_header('careerdetails'); ?>
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="email" class="input-label">
-                         
+
                         email address<i class="required">*</i>
                       </label>
                       <input id="email" name="youremail" type="email" required placeholder="Enter email address" class="form-control input-field">
@@ -96,7 +96,7 @@ get_header('careerdetails'); ?>
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="phone-number" class="input-label">
-                         
+
                         phone number<i class="required">*</i>
                       </label>
                       <input id="name" name="phoneno"  type="text" maxlength="10" required placeholder="Enter phone number" class="form-control input-field input-number">
@@ -109,11 +109,11 @@ get_header('careerdetails'); ?>
                       <div class="custom-file-upload">
                         <input type="file" required data-parsley-errors-container="#choose-file" data-parsley-error-message="Choose file" name="file-496" data-multiple-caption="{count} files selected" multiple="" id="file-7" class="input-field inputfile">
                         <label for="file-7" class="input-label-file"><strong class="input-label-file__btn btn--lg btn btn--oval">Choose file</strong><span class="input-label-file__text">
-                             
+
                             No File Chosen</span></label><span id="choose-file"></span>
                       </div>
                       <button type="submit" value="Send"  class="btn btn--blue btn--lg btn-submit wpcf7-form-control wpcf7-submit">send</button>
-                     
+
                     </div>
              <div class="wpcf7-response-output wpcf7-display-none"></div>
                   </div>

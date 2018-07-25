@@ -575,18 +575,14 @@ h4.banner-title{
   color: #666;
 }
 .section-resourceUpdates .product_content p{
-font-size: 300 12px/29px Montserrat-Light ,sans-serif;
+  font: 300 14px/29px Montserrat-Light ,sans-serif;
 }
 .section-resourceUpdates .product_content .natural-list{
   list-style-type: disc;
   padding-left: 15px;
   margin-left: 10px;
 }
-.section-resourceUpdates .btn-viewAll .btn{
-  width: auto;
-  padding: 14px 4px;
-  max-width: 237px;
-}
+
 .similar-articles-heading{
   margin-top: 0;
 }
@@ -1104,7 +1100,7 @@ font-size: 300 12px/29px Montserrat-Light ,sans-serif;
   -o-transition: all 0.9s ease-in-out;
   transition: all 0.9s ease-in-out;
 }
-* Talent Page */
+/* Talent Page */
 .about-banner-wrapper__heading{
   margin-top: 200px;
   display: block;
@@ -1218,6 +1214,10 @@ font-size: 300 12px/29px Montserrat-Light ,sans-serif;
   line-height: 24px;
   font-weight: 300;
   color: #666;
+}
+/* Newsletter Page */
+.section-newsletter{
+  background-size: cover;
 }
 @media (min-width: 1400px){
   .section--BlogBanner .heading {
