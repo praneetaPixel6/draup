@@ -51,9 +51,9 @@ get_header('productdetail'); ?>
                                                         <?php } ?>
                                                         </div>
 
-                            <div class="text-center btn-viewAll">
+                            <!-- <div class="text-center btn-viewAll">
                                 <a href="#" class="btn btn--oval btn--outline btn--sm text-capitalize">Read the Report in Metacoach</a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-3">
