@@ -544,7 +544,7 @@ h4.banner-title{
 }
 /* Product Page */
 .section-resourceUpdates{
-  background: url('../images/bg-orange-simple.png') 0 -900px no-repeat;
+  background: url('../images/bg-orange-simple.png') 0 -600px no-repeat;
   background-size: 100% 80%;
   position: relative;
 }
