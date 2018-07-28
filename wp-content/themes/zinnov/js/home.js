@@ -38,7 +38,8 @@ $(document).ready(function(){
         infinite: true,
         arrows: false,
         autoplay: true,
-        speed: 500,
+        speed: 350,
+        autoplaySpeed: 1000,
         // fade: true
 
     });
