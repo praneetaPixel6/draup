@@ -123,7 +123,7 @@ $(document).ready(function() {
 
 
       //NavDropdown
-      jQuery('.nav__list a').click(function(){
-        jQuery(this).siblings('.dropdown-Menu').toggle();
-      })
+      // jQuery('.nav__list a').click(function(){
+      //   jQuery(this).siblings('.dropdown-Menu').toggle();
+      // })
 });

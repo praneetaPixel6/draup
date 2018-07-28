@@ -280,6 +280,7 @@ function twentyfifteen_scripts() {
 	wp_enqueue_style('css-draup-pixel6', get_bloginfo('stylesheet_directory'). '/css/pixel6.css');
 	wp_enqueue_style('css-draup-p62', get_bloginfo('stylesheet_directory'). '/css/p62.css');
 	wp_enqueue_script( 'twentyfifteen-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20141010', true );
+	wp_enqueue_script( 'dropdown-js', get_template_directory_uri() . '/js/dropdown.js', array(), '20141010', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
