@@ -92,12 +92,12 @@ get_header();?>
                         <li class="img-slider-menu__list">
                           <div id="img-1" class="img-slide"></div>
                         </li>
-                        <!-- <li class="img-slider-menu__list">
+                        <li class="img-slider-menu__list">
                           <div id="img-2" class="img-slide"></div>
                         </li>
                         <li class="img-slider-menu__list">
                           <div id="img-3" class="img-slide"></div>
-                        </li> -->
+                        </li>
                       </ul>
                     </div>
                   </div>

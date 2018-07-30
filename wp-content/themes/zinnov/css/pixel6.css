@@ -444,21 +444,18 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
   margin-bottom: 0;
 }
 .img-slide{
-  width: 675px;
+  max-width: 675px;
   height: 524px;
   background-size: cover;
 }
 #img-1{
-  background: url('../images/Draup-Banner-Animation.gif') right 0 no-repeat;
-  background-size: cover;
+  background: url('../images/slider-01.png') right center no-repeat;
 }
 #img-2{
-  background: url('../img/draup-slid2.jpg')  no-repeat;
-  background-position: bottom;
+  background: url('../images/slider-02.png') right center no-repeat;
 }
 #img-3{
-  background: url('../img/draup-2.png')  no-repeat;
-  background-position: bottom;
+  background: url('../images/slider-03.png') right center no-repeat;
 }
 h4.banner-title{
   color: #fff;

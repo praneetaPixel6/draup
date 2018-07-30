@@ -15,7 +15,7 @@ $(document).ready(function(){
     $('.news-content-slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        // asNavFor: '.draup-indicator-slider',
+        asNavFor: '.draup-indicator-slider',
         dots: false,
         infinite: true,
         nextArrow: '<div class="slick__arrows slick__next"><i class="icon-right-arrow"></i></div>',
@@ -38,8 +38,8 @@ $(document).ready(function(){
         infinite: true,
         arrows: false,
         autoplay: true,
-        speed: 700,
-        autoplaySpeed: 5000,
+        speed: 600,
+        //autoplaySpeed: 5000,
         // fade: true
 
     });
@@ -51,7 +51,7 @@ $(document).ready(function(){
         infinite: true,
         arrows: false,
         autoplay: true,
-        speed: 500,
+        speed: 600,
         fade: false
     });
 
