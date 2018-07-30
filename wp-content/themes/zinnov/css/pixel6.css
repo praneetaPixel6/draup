@@ -449,13 +449,13 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
   background-size: cover;
 }
 #img-1{
-  background: url('../images/slider-01.png') right center no-repeat;
+  background: url('../images/slider-01.png') center center no-repeat;
 }
 #img-2{
-  background: url('../images/slider-02.png') right center no-repeat;
+  background: url('../images/slider-02.png') center center no-repeat;
 }
 #img-3{
-  background: url('../images/slider-03.png') right center no-repeat;
+  background: url('../images/slider-03.png') center center no-repeat;
 }
 h4.banner-title{
   color: #fff;
