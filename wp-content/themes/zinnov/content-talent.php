@@ -68,7 +68,7 @@ get_header(); ?>
                         <div class="card">
                             <div class="card-header" id="<?php echo "heading".$key1.$key2 ?>">
                                 <h5 class="mb-0">
-                                <button class="collapsed" data-toggle="collapse" data-target="#<?php echo "collapse".$key1.$key2 ?>" aria-expanded="true" aria-controls="<?php echo "collapse".$key1.$key2 ?>">
+                                <button class="collapsed text-left" data-toggle="collapse" data-target="#<?php echo "collapse".$key1.$key2 ?>" aria-expanded="true" aria-controls="<?php echo "collapse".$key1.$key2 ?>">
                                     <?php echo $feature_point['point_title']; ?>
                                 </button>
                                 </h5>

@@ -36,7 +36,9 @@ get_header();?>
                                     the_row();
                                     ?>
                       <li class="banner-slider__list">
-                        <h3 class="heading"><?php echo get_sub_field('slider_heading');?></h3><a href="<?php echo get_option( 'siteurl' );?><?php echo get_sub_field('slider_link');?>" class="link"><?php echo get_sub_field('button_text');?></a>
+                        <div class="login-slide-cont">
+                          <h3 class="heading"><?php echo get_sub_field('slider_heading');?></h3><div class="link-wrap"><a href="<?php echo get_option( 'siteurl' );?><?php echo get_sub_field('slider_link');?>" class="link"><?php echo get_sub_field('button_text');?></a></div>
+                        </div>
                       </li>
                       <?php  $i++;} ?>
 

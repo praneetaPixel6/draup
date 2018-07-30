@@ -20,7 +20,7 @@
       <meta name="author" content="Admin">
       <link rel="shortcut icon" type="image/x-icon" href="https://s3.us-east-2.amazonaws.com/draupassets/icons/draup-favicon.ico" />
       <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/main.css">
-      <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/custom.css">
+      <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/custom.css">      
       <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
@@ -45,7 +45,7 @@
                     .st4{clip-path:url(#SVGID_10_);fill:#fff;}
                     .st6{clip-path:url(#SVGID_14_);fill:#fff;}
                     .st8{clip-path:url(#SVGID_18_);fill:#fff;}
-                    .st10{clip-path:url(#SVGID_22_);fill:#fff;}                    
+                    .st10{clip-path:url(#SVGID_22_);fill:#fff;}
                     .st12{clip-path:url(#SVGID_26_);fill:#fff;}
 
                     @keyframes blink {
@@ -279,7 +279,7 @@
                                                                             <p class="info info--light"><?php echo ot_get_option('menu4_content');?></p><a href="<?php echo get_option('siteurl');?>/<?php echo ot_get_option('menu4_link1');?>" class="link">learn more</a><a href="<?php echo get_option('siteurl');?>/<?php echo ot_get_option('menu4_link2');?>" class="link ml-2">login</a>
                                             </li>
                                             <li class="col-sm-4 drop-menu__list "><a href="<?php echo get_option('siteurl');?>/<?php echo ot_get_option('menu5_link');?>" class="link link--blue title-blue"><?php echo ot_get_option('menu5');?></a>
-                                                                            <p class="info info--light"><?php echo ot_get_option('menu5_content');?></p><a href="javascript:void(0)" class="link link--disabled"></a>
+                                                                            <p class="info info--light"><?php echo ot_get_option('menu5_content');?></p><a href="<?php echo get_option('siteurl');?>/<?php echo ot_get_option('menu5_link');?>" class="link">learn more</a><a href="<?php echo get_option('siteurl');?>/<?php echo ot_get_option('menu5_link2');?>" class="link ml-2">login</a>
                                             </li>
                                             <li class="col-sm-4 drop-menu__list no-links"><a href="<?php echo get_option('siteurl');?>/<?php echo ot_get_option('menu6_link');?>" class="link link--blue title-blue"><?php echo ot_get_option('menu6');?></a>
                                                                             <p class="info info--light"><?php echo ot_get_option('menu6_content');?></p><a href="javascript:void(0)" class="link link--disabled"></a>
@@ -306,9 +306,9 @@
                                             <li class="col-sm-3 drop-menu__list"><a href="<?php echo get_option('siteurl');?>/<?php echo ot_get_option('menu9_link');?>" class="link link--blue title-blue"><?php echo ot_get_option('menu9');?></a>
                                                                             <p class="info info--light"><?php echo ot_get_option('menu9_content');?></p><a href="<?php echo get_option('siteurl');?>/<?php echo ot_get_option('menu9_link');?>" class="link">read more</a>
                                             </li>
-                                            <li class="col-sm-3 drop-menu__list"><a href="<?php echo get_option('siteurl');?>/<?php echo ot_get_option('menu10_link');?>" class="link link--blue title-blue"><?php echo ot_get_option('menu10');?></a>
+                                            <!-- <li class="col-sm-3 drop-menu__list"><a href="<?php echo get_option('siteurl');?>/<?php echo ot_get_option('menu10_link');?>" class="link link--blue title-blue"><?php echo ot_get_option('menu10');?></a>
                                                                             <p class="info info--light"><?php echo ot_get_option('menu10_content');?></p><a href="<?php echo get_option('siteurl');?>/<?php echo ot_get_option('menu10_link');?>" class="link">read more</a>
-                                            </li>
+                                            </li> -->
                                           </ul>
                                         </div>
                                       </div>

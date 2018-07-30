@@ -247,7 +247,7 @@ get_header('about'); ?>
         </div>
       </section>
       <!--Start: Testimonials-->
-      <section class="section section-testimonial">
+      <section class="section section-testimonial d-none">
         <div class="container">
           <h3 class="section-title text-center">Testimonials</h3>
             <div class="col-sm-8 col-sm-offset-2 bg-white testimonials-content">

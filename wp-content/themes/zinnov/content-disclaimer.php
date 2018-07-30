@@ -11,7 +11,7 @@ get_header('disclaimer'); ?>
 <?php while ( have_posts() ) : the_post(); ?>
   <main>
       <!--Start: Banner-->
-      <section class="section-FAQBanner">
+      <section class="section-FAQBanner blue-bg-pattern">
         <div class="container">
           <div class="row">
             <div class="contact-banner-container clearfix">
@@ -43,8 +43,3 @@ get_header('disclaimer'); ?>
     <?php endwhile; ?>
     <?php get_footer(); ?>
     <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/blog-header-animation.js"></script>
-    
-    
-    
-    
-    

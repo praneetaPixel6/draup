@@ -272,6 +272,13 @@ function custom_theme_options() {
         'type' => 'text',
         'section' => 'header'
     ),
+   array(
+        'id' => 'menu5_link2',
+        'label' => 'Enter link',
+        'type' => 'text',
+        'section' => 'header'
+    ),
+
     
     array(
         'id' => 'menu6',

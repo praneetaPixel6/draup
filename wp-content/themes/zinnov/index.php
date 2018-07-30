@@ -65,9 +65,9 @@ get_header();?>
           <div class="container-fluid">
             <div class="row">
               <div class="col-lg-10 col-lg-offset-2">
-                <div class="banner-wrapper d-flex align-items-end clearfix">
+                <div class="banner-wrapper clearfix">
                   <!--start: Slider Content-->
-                  <div class="col-md-4 ">
+                  <div class="col-sm-4 col-xs-12">
                     <div class="content-slider-wrapper">
                       <ul class="content-slider-menu clearfix">
                         <li class="content-slider-menu__list">
@@ -86,7 +86,7 @@ get_header();?>
                     </div>
                   </div>
                   <!--start: Image Slider Content-->
-                  <div class="col-md-7 text-right hidden-xs">
+                  <div class="col-sm-7 text-right hidden-xs">
                     <div class="img-slider-wrapper">
                       <ul class="img-slider-menu clearfix">
                         <li class="img-slider-menu__list">
@@ -361,5 +361,8 @@ function validateEmail(emailField){
     return true;
 
 }
+
+
+
 </script>
 <?php get_footer(); ?>
