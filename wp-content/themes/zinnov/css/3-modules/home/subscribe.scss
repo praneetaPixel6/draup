@@ -1,0 +1,180 @@
+
+.section{
+    &--subscribe {
+        padding-top: 50px;
+
+        @media(min-width: $sm) {
+            padding-top: 100px;
+            // padding-bottom: 50px;
+        }
+        @media(min-width: $md) {
+            padding-top: 150px;
+            // padding-bottom: 150px;
+        }
+
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+
+            position: absolute;
+            top: 30%;
+            left: 0px;
+            height: 587px;
+            content: '';
+            width: 100%;
+            transform: skewY(-7deg);
+            background-color:#f0faff;
+            filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#f0faff, endColorstr=#f7f9fa);
+            background-image:-moz-linear-gradient(top, #f0faff 0%, #f7f9fa 0%,#ffffff 100%);
+            background-image:linear-gradient(top, #f0faff 0%, #f7f9fa 0%,#ffffff 100%);
+            background-image:-webkit-linear-gradient(top, #f0faff 0%, #f7f9fa 0%,#ffffff 100%);
+            background-image:-o-linear-gradient(top, #f0faff 0%, #f7f9fa 0%,#ffffff 100%);
+            background-image:-ms-linear-gradient(top, #f0faff 0%, #f7f9fa 0%,#ffffff 100%);
+            background-image:-webkit-gradient(linear, right top, right bottom, color-stop(0%,#f0faff), color-stop(0%,#f7f9fa),color-stop(100%,#ffffff));
+
+            position: absolute;
+            top: 35%;
+            left: 0;
+            height: 752px;
+            content: '';
+            width: 100%;
+            -webkit-transform: skewY(-7deg);
+            transform: skewY(-5deg);
+            background-color: #fff4f4;
+            filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#f0faff,endColorstr=#f7f9fa);
+            background-image: linear-gradient(top,#f0faff 0%,#f7f9fa 0%,#fff 100%);
+            background-image: -ms-linear-gradient(top,#f0faff 0%,#f7f9fa 0%,#fff 100%);
+            background-image: -webkit-gradient(linear,right top,right bottom,color-stop(0%,#f0faff),color-stop(0%,#fcfbfb),color-stop(100%,#fff));
+            Z-INDEX: -1;
+
+        }
+    }
+}
+
+.logo-footer {
+    padding: 30px 0px;
+    @media(min-width: $sm) {
+        padding-top: 50px;
+    }
+    @media(min-width: $md) {
+        padding-top: 70px;
+    }
+}
+
+.subscribe-wrapper {
+    /* Style for "Rounded Re" */
+
+    background: linear-gradient(-56deg, #ff9a0e 0%, #ff6666 100%);
+    border-radius: 10px;
+    padding: 30px 15px 60px;
+    position: relative;
+
+    @media(min-width: $sm) {
+        padding: 40px 30px 80px;
+    }
+    @media(min-width: $md) {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+    @media(min-width: $lg) {
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+
+
+    .bar {
+        position: absolute;
+        left: -10px;
+
+    }
+
+    .circle {
+        position: absolute;
+        // left: -40px;
+    }
+
+    .circle--circlePink {
+        // opacity: 0.5;
+        background-color: #f6c3c5;
+
+        &--top {
+            left: 3%;
+            top: 20px;
+        }
+
+
+        &--bottom {
+            top: 40%;
+            left: -12px;
+
+            @media(min-width: $sm) {
+                left: -20px;
+            }
+        }
+    }
+
+    .circle--ring {
+        display: none;
+        @media(min-width: $sm) {
+            display: block;
+            left: 8%;
+            top: 10%;
+        }
+    }
+
+    .info {
+        padding-top: 10px;
+        @media(min-width: $sm) {
+            padding-top: 20px;
+        }
+    }
+}
+
+.section-heading{
+
+    &--white {
+        color: #fff;
+    }
+}
+
+.subscribe-form-wrapper {
+    padding-top: 25px;
+    position: relative;
+
+    .circle--ring {
+        display: block;
+        position: absolute;
+        bottom: -50px;
+        left: 10%;
+        top: auto;
+    }
+}
+.subscribe-form{
+
+    &__group {
+        position: relative;
+    }
+}
+
+.submit-btn {
+    position: absolute;
+    top: 68%;
+    background: transparent;
+    border: 0px;
+    transform: translateY(-50%);
+    right: 0px;
+    color: #0093ff;
+    font-family: $m-bold;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+        padding: 18px 15px;
+    // line-height: 29px;
+    text-transform: uppercase;
+    letter-spacing: 1.32px;
+
+    @media(min-width: $sm) {
+        padding: 18px;
+    }
+}

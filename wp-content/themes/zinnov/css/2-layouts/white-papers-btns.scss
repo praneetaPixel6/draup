@@ -1,0 +1,22 @@
+.button {
+    transition: all 500ms ease-in-out;
+    &:hover,
+    &:focus,
+    &:active {
+        transform: translateY(-5px);
+
+    }
+
+    &--white {
+        box-shadow: 0 1px 10px 0px rgba(35, 31, 32, 0.09);
+        background-color: #ffffff;
+        color: #1186f4;
+
+        &:hover,
+        &:focus,
+        &:active {
+            // box-shadow: 0 3px 21px 6px rgba(35, 31, 32, 0.09);
+            box-shadow: 0 5px 21px 4px rgba(35, 31, 32, 0.08);
+        }
+    }
+}

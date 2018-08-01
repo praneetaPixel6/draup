@@ -1,0 +1,54 @@
+.requestModal {
+
+    .modal-title {
+        font-size: 18px;
+    }
+
+    .modal-header {
+        border: 0px;
+        position: relative;
+
+        .bar {
+            position: absolute;
+            right: -35px;
+            top: -20px;
+        }
+
+    }
+    .modal-dialog {
+        @media(min-width: $sm) {
+            width: 440px;
+            margin: 30px auto;
+        }
+    }
+    .form-group {
+        padding-bottom: 15px;
+    }
+
+    .info {
+        color: #999999;
+
+        font-size: 16px;
+        padding: 15px 0px 0;
+    }
+    .login-form {
+        margin-top: 0px;
+    }
+
+    .modal-content {
+        padding: 30px 15px;
+
+        @media(min-width: $sm) {
+            padding: 50px 30px;
+        }
+    }
+
+    .modal-body {
+        position: relative;
+
+        .bar {
+            position: absolute;
+            right: -40px;
+        }
+    }
+}
